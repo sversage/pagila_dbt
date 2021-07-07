@@ -1,0 +1,2342 @@
+2021-07-06 22:06:58.874442 (MainThread): Running with dbt=0.19.2
+2021-07-06 22:06:58.985127 (MainThread): running dbt with arguments Namespace(cls=<class 'dbt.task.run.RunTask'>, debug=False, defer=None, exclude=None, fail_fast=False, full_refresh=False, log_cache_events=False, log_format='default', models=None, partial_parse=None, profile=None, profiles_dir='/Users/mversage003/.dbt', project_dir=None, record_timing_info=None, rpc_method='run', selector_name=None, single_threaded=False, state=None, strict=False, target=None, test_new_parser=False, threads=None, use_cache=True, use_colors=None, vars='{}', version_check=True, warn_error=False, which='run', write_json=True)
+2021-07-06 22:06:58.988706 (MainThread): Tracking: do not track
+2021-07-06 22:06:59.028187 (MainThread): Parsing macros/catalog.sql
+2021-07-06 22:06:59.035603 (MainThread): Parsing macros/relations.sql
+2021-07-06 22:06:59.038957 (MainThread): Parsing macros/adapters.sql
+2021-07-06 22:06:59.059811 (MainThread): Parsing macros/materializations/snapshot_merge.sql
+2021-07-06 22:06:59.068350 (MainThread): Parsing macros/core.sql
+2021-07-06 22:06:59.073405 (MainThread): Parsing macros/materializations/helpers.sql
+2021-07-06 22:06:59.082012 (MainThread): Parsing macros/materializations/snapshot/snapshot_merge.sql
+2021-07-06 22:06:59.084954 (MainThread): Parsing macros/materializations/snapshot/strategies.sql
+2021-07-06 22:06:59.103959 (MainThread): Parsing macros/materializations/snapshot/snapshot.sql
+2021-07-06 22:06:59.137082 (MainThread): Parsing macros/materializations/seed/seed.sql
+2021-07-06 22:06:59.156759 (MainThread): Parsing macros/materializations/incremental/helpers.sql
+2021-07-06 22:06:59.159681 (MainThread): Parsing macros/materializations/incremental/incremental.sql
+2021-07-06 22:06:59.167738 (MainThread): Parsing macros/materializations/common/merge.sql
+2021-07-06 22:06:59.181718 (MainThread): Parsing macros/materializations/table/table.sql
+2021-07-06 22:06:59.189865 (MainThread): Parsing macros/materializations/view/view.sql
+2021-07-06 22:06:59.197024 (MainThread): Parsing macros/materializations/view/create_or_replace_view.sql
+2021-07-06 22:06:59.205690 (MainThread): Parsing macros/etc/get_custom_alias.sql
+2021-07-06 22:06:59.207834 (MainThread): Parsing macros/etc/query.sql
+2021-07-06 22:06:59.209799 (MainThread): Parsing macros/etc/is_incremental.sql
+2021-07-06 22:06:59.211895 (MainThread): Parsing macros/etc/datetime.sql
+2021-07-06 22:06:59.220963 (MainThread): Parsing macros/etc/get_custom_schema.sql
+2021-07-06 22:06:59.224118 (MainThread): Parsing macros/etc/get_custom_database.sql
+2021-07-06 22:06:59.227006 (MainThread): Parsing macros/adapters/common.sql
+2021-07-06 22:06:59.267223 (MainThread): Parsing macros/schema_tests/relationships.sql
+2021-07-06 22:06:59.271028 (MainThread): Parsing macros/schema_tests/not_null.sql
+2021-07-06 22:06:59.273944 (MainThread): Parsing macros/schema_tests/unique.sql
+2021-07-06 22:06:59.277102 (MainThread): Parsing macros/schema_tests/accepted_values.sql
+2021-07-06 22:06:59.428029 (MainThread): Acquiring new postgres connection "model.pagila_pql.rental_stats".
+2021-07-06 22:06:59.505034 (MainThread): WARNING: Found documentation for resource "my_first_dbt_model" which was not found or is disabled
+2021-07-06 22:06:59.505149 (MainThread): WARNING: Found documentation for resource "my_second_dbt_model" which was not found or is disabled
+2021-07-06 22:06:59.505313 (MainThread): [WARNING]: Test 'test.pagila_pql.unique_my_first_dbt_model_id' (models/example/schema.yml) depends on a node named 'my_first_dbt_model' which was not found
+2021-07-06 22:06:59.505433 (MainThread): [WARNING]: Test 'test.pagila_pql.not_null_my_first_dbt_model_id' (models/example/schema.yml) depends on a node named 'my_first_dbt_model' which was not found
+2021-07-06 22:06:59.505516 (MainThread): [WARNING]: Test 'test.pagila_pql.unique_my_second_dbt_model_id' (models/example/schema.yml) depends on a node named 'my_second_dbt_model' which was not found
+2021-07-06 22:06:59.505589 (MainThread): [WARNING]: Test 'test.pagila_pql.not_null_my_second_dbt_model_id' (models/example/schema.yml) depends on a node named 'my_second_dbt_model' which was not found
+2021-07-06 22:06:59.509408 (MainThread): [WARNING]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.pagila_dest_tranformation.example
+
+2021-07-06 22:06:59.516581 (MainThread): Found 1 model, 0 tests, 0 snapshots, 0 analyses, 138 macros, 0 operations, 0 seed files, 0 sources, 0 exposures
+2021-07-06 22:06:59.517297 (MainThread): 
+2021-07-06 22:06:59.517621 (MainThread): Acquiring new postgres connection "master".
+2021-07-06 22:06:59.518449 (ThreadPoolExecutor-0_0): Acquiring new postgres connection "list_source_analytics".
+2021-07-06 22:06:59.526675 (ThreadPoolExecutor-0_0): Using postgres connection "list_source_analytics".
+2021-07-06 22:06:59.526869 (ThreadPoolExecutor-0_0): On list_source_analytics: /* {"app": "dbt", "dbt_version": "0.19.2", "profile_name": "normalize", "target_name": "prod", "connection_name": "list_source_analytics"} */
+
+    select distinct nspname from pg_namespace
+  
+2021-07-06 22:06:59.526942 (ThreadPoolExecutor-0_0): Opening a new connection, currently in state init
+2021-07-06 22:06:59.574758 (ThreadPoolExecutor-0_0): SQL status: SELECT 4 in 0.05 seconds
+2021-07-06 22:06:59.578940 (ThreadPoolExecutor-0_0): On list_source_analytics: Close
+2021-07-06 22:06:59.580105 (ThreadPoolExecutor-1_0): Acquiring new postgres connection "list_source_analytics_public".
+2021-07-06 22:06:59.585511 (ThreadPoolExecutor-1_0): Using postgres connection "list_source_analytics_public".
+2021-07-06 22:06:59.585658 (ThreadPoolExecutor-1_0): On list_source_analytics_public: BEGIN
+2021-07-06 22:06:59.585735 (ThreadPoolExecutor-1_0): Opening a new connection, currently in state closed
+2021-07-06 22:06:59.597027 (ThreadPoolExecutor-1_0): SQL status: BEGIN in 0.01 seconds
+2021-07-06 22:06:59.597435 (ThreadPoolExecutor-1_0): Using postgres connection "list_source_analytics_public".
+2021-07-06 22:06:59.597553 (ThreadPoolExecutor-1_0): On list_source_analytics_public: /* {"app": "dbt", "dbt_version": "0.19.2", "profile_name": "normalize", "target_name": "prod", "connection_name": "list_source_analytics_public"} */
+select
+      'source_analytics' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public'
+    union all
+    select
+      'source_analytics' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public'
+  
+2021-07-06 22:06:59.604152 (ThreadPoolExecutor-1_0): SQL status: SELECT 3 in 0.01 seconds
+2021-07-06 22:06:59.604849 (ThreadPoolExecutor-1_0): On list_source_analytics_public: ROLLBACK
+2021-07-06 22:06:59.606050 (ThreadPoolExecutor-1_0): On list_source_analytics_public: Close
+2021-07-06 22:06:59.609695 (MainThread): Using postgres connection "master".
+2021-07-06 22:06:59.609849 (MainThread): On master: BEGIN
+2021-07-06 22:06:59.609923 (MainThread): Opening a new connection, currently in state init
+2021-07-06 22:06:59.618221 (MainThread): SQL status: BEGIN in 0.01 seconds
+2021-07-06 22:06:59.618425 (MainThread): Using postgres connection "master".
+2021-07-06 22:06:59.618512 (MainThread): On master: /* {"app": "dbt", "dbt_version": "0.19.2", "profile_name": "normalize", "target_name": "prod", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+2021-07-06 22:06:59.623928 (MainThread): SQL status: SELECT 0 in 0.01 seconds
+2021-07-06 22:06:59.624260 (MainThread): On master: ROLLBACK
+2021-07-06 22:06:59.625404 (MainThread): Using postgres connection "master".
+2021-07-06 22:06:59.625489 (MainThread): On master: BEGIN
+2021-07-06 22:06:59.627224 (MainThread): SQL status: BEGIN in 0.00 seconds
+2021-07-06 22:06:59.627355 (MainThread): On master: COMMIT
+2021-07-06 22:06:59.627428 (MainThread): Using postgres connection "master".
+2021-07-06 22:06:59.627484 (MainThread): On master: COMMIT
+2021-07-06 22:06:59.628368 (MainThread): SQL status: COMMIT in 0.00 seconds
+2021-07-06 22:06:59.628464 (MainThread): On master: Close
+2021-07-06 22:06:59.628703 (MainThread): 15:06:59 | Concurrency: 32 threads (target='prod')
+2021-07-06 22:06:59.628809 (MainThread): 15:06:59 | 
+2021-07-06 22:06:59.635388 (Thread-1): Began running node model.pagila_pql.rental_stats
+2021-07-06 22:06:59.635701 (Thread-1): 15:06:59 | 1 of 1 START table model public.rental_stats................................................................. [RUN]
+2021-07-06 22:06:59.635965 (Thread-1): Acquiring new postgres connection "model.pagila_pql.rental_stats".
+2021-07-06 22:06:59.636070 (Thread-1): Compiling model.pagila_pql.rental_stats
+2021-07-06 22:06:59.637962 (Thread-1): Writing injected SQL for node "model.pagila_pql.rental_stats"
+2021-07-06 22:06:59.641048 (Thread-1): finished collecting timing info
+2021-07-06 22:06:59.655012 (Thread-1): Using postgres connection "model.pagila_pql.rental_stats".
+2021-07-06 22:06:59.655167 (Thread-1): On model.pagila_pql.rental_stats: /* {"app": "dbt", "dbt_version": "0.19.2", "profile_name": "normalize", "target_name": "prod", "node_id": "model.pagila_pql.rental_stats"} */
+drop table if exists "source_analytics"."public"."rental_stats__dbt_tmp" cascade
+2021-07-06 22:06:59.655239 (Thread-1): Opening a new connection, currently in state closed
+2021-07-06 22:06:59.663505 (Thread-1): SQL status: DROP TABLE in 0.01 seconds
+2021-07-06 22:06:59.666615 (Thread-1): Using postgres connection "model.pagila_pql.rental_stats".
+2021-07-06 22:06:59.667114 (Thread-1): On model.pagila_pql.rental_stats: /* {"app": "dbt", "dbt_version": "0.19.2", "profile_name": "normalize", "target_name": "prod", "node_id": "model.pagila_pql.rental_stats"} */
+drop table if exists "source_analytics"."public"."rental_stats__dbt_backup" cascade
+2021-07-06 22:06:59.669021 (Thread-1): SQL status: DROP TABLE in 0.00 seconds
+2021-07-06 22:06:59.677646 (Thread-1): Writing runtime SQL for node "model.pagila_pql.rental_stats"
+2021-07-06 22:06:59.680350 (Thread-1): Using postgres connection "model.pagila_pql.rental_stats".
+2021-07-06 22:06:59.680456 (Thread-1): On model.pagila_pql.rental_stats: BEGIN
+2021-07-06 22:06:59.682218 (Thread-1): SQL status: BEGIN in 0.00 seconds
+2021-07-06 22:06:59.682351 (Thread-1): Using postgres connection "model.pagila_pql.rental_stats".
+2021-07-06 22:06:59.682415 (Thread-1): On model.pagila_pql.rental_stats: /* {"app": "dbt", "dbt_version": "0.19.2", "profile_name": "normalize", "target_name": "prod", "node_id": "model.pagila_pql.rental_stats"} */
+
+
+  create  table "source_analytics"."public"."rental_stats__dbt_tmp"
+  as (
+    /*
+    Welcome to your first dbt model!
+    Did you know that you can also configure models directly within SQL files?
+    This will override configurations stated in dbt_project.yml
+
+    Try changing "table" to "view" below
+*/
+
+
+
+with source_data as (
+
+    select 1 as id
+    union all
+    select null as id
+
+)
+
+-- date_part('week', to_date(rental_date, 'YYYY/MM/DD'))
+WITH enriched_data as (
+    SELECT *,
+        date_part('week', to_date(r.rental_date, 'YYYY/MM/DD')) AS rental_week,
+        date_part('year', to_date(r.rental_date, 'YYYY/MM/DD'))  AS rental_year,
+        date_part('week', to_date(r.return_date, 'YYYY/MM/DD')) AS return_week,
+        date_part('year', to_date(r.return_date, 'YYYY/MM/DD')) AS return_year
+    FROM rental r 
+)
+
+WITH rental_stats as (
+    SELECT 
+        CASE 
+            WHEN agg_returns.WeekBeginning ISNULL THEN open_rentals.WeekBeginning
+            ELSE agg_returns.WeekBeginning
+        END as WeekBeginning,
+        agg_returns.ReturnedRentals,
+        open_rentals.OutstandingRentals
+
+    FROM (
+        SELECT returned_info.WeekBeginning, SUM(returned_info.ReturnedRentals) AS ReturnedRentals
+        FROM(
+                SELECT date_trunc('week', return_date::timestamp)::date AS WeekBeginning, count(*) AS ReturnedRentals
+                FROM enriched_rental er 
+                WHERE rental_week = return_week and rental_year = return_year 
+                GROUP BY date_trunc('week', return_date::timestamp)::date
+            UNION ALL
+                SELECT date_trunc('week', return_date::timestamp)::date AS WeekBeginning, count(*) AS ReturnedRentals
+                FROM enriched_rental er 
+                WHERE rental_week != return_week
+                GROUP BY date_trunc('week', return_date::timestamp)::date
+                ) returned_info
+        GROUP BY returned_info.WeekBeginning ) AS agg_returns
+    FULL JOIN (
+        SELECT date_trunc('week', rental_date ::timestamp)::date AS WeekBeginning, count(*) AS OutstandingRentals
+        FROM enriched_rental er 
+        WHERE rental_week != return_week or return_week ISNULL
+        GROUP BY date_trunc('week', rental_date ::timestamp)::date
+    ) AS open_rentals ON open_rentals.WeekBeginning = agg_returns.WeekBeginning
+    ORDER BY WeekBeginning
+)
+  );
+2021-07-06 22:06:59.684841 (Thread-1): Postgres error: syntax error at or near "WITH"
+LINE 25: WITH enriched_data as (
+         ^
+
+2021-07-06 22:06:59.685025 (Thread-1): On model.pagila_pql.rental_stats: ROLLBACK
+2021-07-06 22:06:59.686210 (Thread-1): finished collecting timing info
+2021-07-06 22:06:59.686359 (Thread-1): On model.pagila_pql.rental_stats: Close
+2021-07-06 22:06:59.686635 (Thread-1): Database Error in model rental_stats (models/example/rental_stats.sql)
+  syntax error at or near "WITH"
+  LINE 25: WITH enriched_data as (
+           ^
+  compiled SQL at target/run/pagila_pql/models/example/rental_stats.sql
+Traceback (most recent call last):
+  File "/Users/mversage003/opt/anaconda3/lib/python3.8/site-packages/dbt/adapters/postgres/connections.py", line 47, in exception_handler
+    yield
+  File "/Users/mversage003/opt/anaconda3/lib/python3.8/site-packages/dbt/adapters/sql/connections.py", line 80, in add_query
+    cursor.execute(sql, bindings)
+psycopg2.errors.SyntaxError: syntax error at or near "WITH"
+LINE 25: WITH enriched_data as (
+         ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/mversage003/opt/anaconda3/lib/python3.8/site-packages/dbt/task/base.py", line 344, in safe_run
+    result = self.compile_and_execute(manifest, ctx)
+  File "/Users/mversage003/opt/anaconda3/lib/python3.8/site-packages/dbt/task/base.py", line 287, in compile_and_execute
+    result = self.run(ctx.node, manifest)
+  File "/Users/mversage003/opt/anaconda3/lib/python3.8/site-packages/dbt/task/base.py", line 389, in run
+    return self.execute(compiled_node, manifest)
+  File "/Users/mversage003/opt/anaconda3/lib/python3.8/site-packages/dbt/task/run.py", line 248, in execute
+    result = MacroGenerator(materialization_macro, context)()
+  File "/Users/mversage003/opt/anaconda3/lib/python3.8/site-packages/dbt/clients/jinja.py", line 332, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/Users/mversage003/opt/anaconda3/lib/python3.8/site-packages/dbt/clients/jinja.py", line 259, in call_macro
+    return macro(*args, **kwargs)
+  File "/Users/mversage003/opt/anaconda3/lib/python3.8/site-packages/jinja2/runtime.py", line 675, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/Users/mversage003/opt/anaconda3/lib/python3.8/site-packages/jinja2/runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 63, in macro
+  File "/Users/mversage003/opt/anaconda3/lib/python3.8/site-packages/jinja2/sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/Users/mversage003/opt/anaconda3/lib/python3.8/site-packages/jinja2/runtime.py", line 290, in call
+    return __obj(*args, **kwargs)
+  File "/Users/mversage003/opt/anaconda3/lib/python3.8/site-packages/dbt/clients/jinja.py", line 332, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/Users/mversage003/opt/anaconda3/lib/python3.8/site-packages/dbt/clients/jinja.py", line 259, in call_macro
+    return macro(*args, **kwargs)
+  File "/Users/mversage003/opt/anaconda3/lib/python3.8/site-packages/jinja2/runtime.py", line 675, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/Users/mversage003/opt/anaconda3/lib/python3.8/site-packages/jinja2/runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 41, in macro
+  File "/Users/mversage003/opt/anaconda3/lib/python3.8/site-packages/jinja2/sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/Users/mversage003/opt/anaconda3/lib/python3.8/site-packages/jinja2/runtime.py", line 290, in call
+    return __obj(*args, **kwargs)
+  File "/Users/mversage003/opt/anaconda3/lib/python3.8/site-packages/dbt/adapters/base/impl.py", line 227, in execute
+    return self.connections.execute(
+  File "/Users/mversage003/opt/anaconda3/lib/python3.8/site-packages/dbt/adapters/sql/connections.py", line 124, in execute
+    _, cursor = self.add_query(sql, auto_begin)
+  File "/Users/mversage003/opt/anaconda3/lib/python3.8/site-packages/dbt/adapters/sql/connections.py", line 87, in add_query
+    return connection, cursor
+  File "/Users/mversage003/opt/anaconda3/lib/python3.8/contextlib.py", line 131, in __exit__
+    self.gen.throw(type, value, traceback)
+  File "/Users/mversage003/opt/anaconda3/lib/python3.8/site-packages/dbt/adapters/postgres/connections.py", line 58, in exception_handler
+    raise dbt.exceptions.DatabaseException(str(e).strip()) from e
+dbt.exceptions.DatabaseException: Database Error in model rental_stats (models/example/rental_stats.sql)
+  syntax error at or near "WITH"
+  LINE 25: WITH enriched_data as (
+           ^
+  compiled SQL at target/run/pagila_pql/models/example/rental_stats.sql
+2021-07-06 22:06:59.703235 (Thread-1): 15:06:59 | 1 of 1 ERROR creating table model public.rental_stats........................................................ [ERROR in 0.07s]
+2021-07-06 22:06:59.703397 (Thread-1): Finished running node model.pagila_pql.rental_stats
+2021-07-06 22:06:59.705293 (MainThread): Acquiring new postgres connection "master".
+2021-07-06 22:06:59.705508 (MainThread): Using postgres connection "master".
+2021-07-06 22:06:59.705576 (MainThread): On master: BEGIN
+2021-07-06 22:06:59.705653 (MainThread): Opening a new connection, currently in state closed
+2021-07-06 22:06:59.713923 (MainThread): SQL status: BEGIN in 0.01 seconds
+2021-07-06 22:06:59.714152 (MainThread): On master: COMMIT
+2021-07-06 22:06:59.714232 (MainThread): Using postgres connection "master".
+2021-07-06 22:06:59.714292 (MainThread): On master: COMMIT
+2021-07-06 22:06:59.715352 (MainThread): SQL status: COMMIT in 0.00 seconds
+2021-07-06 22:06:59.715486 (MainThread): On master: Close
+2021-07-06 22:06:59.715781 (MainThread): 15:06:59 | 
+2021-07-06 22:06:59.715894 (MainThread): 15:06:59 | Finished running 1 table model in 0.20s.
+2021-07-06 22:06:59.716036 (MainThread): Connection 'master' was properly closed.
+2021-07-06 22:06:59.716141 (MainThread): Connection 'model.pagila_pql.rental_stats' was properly closed.
+2021-07-06 22:06:59.720462 (MainThread): 
+2021-07-06 22:06:59.720622 (MainThread): Completed with 1 error and 0 warnings:
+2021-07-06 22:06:59.720708 (MainThread): 
+2021-07-06 22:06:59.720816 (MainThread): Database Error in model rental_stats (models/example/rental_stats.sql)
+2021-07-06 22:06:59.720883 (MainThread):   syntax error at or near "WITH"
+2021-07-06 22:06:59.720940 (MainThread):   LINE 25: WITH enriched_data as (
+2021-07-06 22:06:59.720996 (MainThread):            ^
+2021-07-06 22:06:59.721052 (MainThread):   compiled SQL at target/run/pagila_pql/models/example/rental_stats.sql
+2021-07-06 22:06:59.721123 (MainThread): 
+Done. PASS=0 WARN=0 ERROR=1 SKIP=0 TOTAL=1
+2021-07-06 22:06:59.721242 (MainThread): Flushing usage events
+2021-07-06 22:09:36.755657 (MainThread): Running with dbt=0.19.2
+2021-07-06 22:09:36.825177 (MainThread): running dbt with arguments Namespace(cls=<class 'dbt.task.run.RunTask'>, debug=False, defer=None, exclude=None, fail_fast=False, full_refresh=False, log_cache_events=False, log_format='default', models=None, partial_parse=None, profile=None, profiles_dir='/Users/mversage003/.dbt', project_dir=None, record_timing_info=None, rpc_method='run', selector_name=None, single_threaded=False, state=None, strict=False, target=None, test_new_parser=False, threads=None, use_cache=True, use_colors=None, vars='{}', version_check=True, warn_error=False, which='run', write_json=True)
+2021-07-06 22:09:36.826922 (MainThread): Tracking: do not track
+2021-07-06 22:09:36.860555 (MainThread): For key pagila_pql, hash mismatch (FileHash(name='sha256', checksum='9e4534c5bda5b3c2b17d4485ca40fb03885eac3813e0f9cce835f89cdaaae952') -> FileHash(name='sha256', checksum='235fa3e6c1b48ddc5c7fff662282d6460d31cbd99a775bfd2bcc696637c354a6')), cache invalidated
+2021-07-06 22:09:36.863301 (MainThread): Parsing macros/catalog.sql
+2021-07-06 22:09:36.867538 (MainThread): Parsing macros/relations.sql
+2021-07-06 22:09:36.869024 (MainThread): Parsing macros/adapters.sql
+2021-07-06 22:09:36.888630 (MainThread): Parsing macros/materializations/snapshot_merge.sql
+2021-07-06 22:09:36.893544 (MainThread): Parsing macros/core.sql
+2021-07-06 22:09:36.897571 (MainThread): Parsing macros/materializations/helpers.sql
+2021-07-06 22:09:36.906593 (MainThread): Parsing macros/materializations/snapshot/snapshot_merge.sql
+2021-07-06 22:09:36.908785 (MainThread): Parsing macros/materializations/snapshot/strategies.sql
+2021-07-06 22:09:36.927594 (MainThread): Parsing macros/materializations/snapshot/snapshot.sql
+2021-07-06 22:09:36.959601 (MainThread): Parsing macros/materializations/seed/seed.sql
+2021-07-06 22:09:36.979533 (MainThread): Parsing macros/materializations/incremental/helpers.sql
+2021-07-06 22:09:36.981409 (MainThread): Parsing macros/materializations/incremental/incremental.sql
+2021-07-06 22:09:36.987516 (MainThread): Parsing macros/materializations/common/merge.sql
+2021-07-06 22:09:37.000720 (MainThread): Parsing macros/materializations/table/table.sql
+2021-07-06 22:09:37.007945 (MainThread): Parsing macros/materializations/view/view.sql
+2021-07-06 22:09:37.013834 (MainThread): Parsing macros/materializations/view/create_or_replace_view.sql
+2021-07-06 22:09:37.018555 (MainThread): Parsing macros/etc/get_custom_alias.sql
+2021-07-06 22:09:37.020115 (MainThread): Parsing macros/etc/query.sql
+2021-07-06 22:09:37.021429 (MainThread): Parsing macros/etc/is_incremental.sql
+2021-07-06 22:09:37.023105 (MainThread): Parsing macros/etc/datetime.sql
+2021-07-06 22:09:37.031123 (MainThread): Parsing macros/etc/get_custom_schema.sql
+2021-07-06 22:09:37.033252 (MainThread): Parsing macros/etc/get_custom_database.sql
+2021-07-06 22:09:37.035019 (MainThread): Parsing macros/adapters/common.sql
+2021-07-06 22:09:37.075632 (MainThread): Parsing macros/schema_tests/relationships.sql
+2021-07-06 22:09:37.077538 (MainThread): Parsing macros/schema_tests/not_null.sql
+2021-07-06 22:09:37.079173 (MainThread): Parsing macros/schema_tests/unique.sql
+2021-07-06 22:09:37.080853 (MainThread): Parsing macros/schema_tests/accepted_values.sql
+2021-07-06 22:09:37.090149 (MainThread): For key pagila_pql, hash mismatch (FileHash(name='sha256', checksum='9e4534c5bda5b3c2b17d4485ca40fb03885eac3813e0f9cce835f89cdaaae952') -> FileHash(name='sha256', checksum='235fa3e6c1b48ddc5c7fff662282d6460d31cbd99a775bfd2bcc696637c354a6')), cache invalidated
+2021-07-06 22:09:37.228759 (MainThread): Acquiring new postgres connection "model.pagila_pql.rental_stats".
+2021-07-06 22:09:37.292622 (MainThread): WARNING: Found documentation for resource "my_first_dbt_model" which was not found or is disabled
+2021-07-06 22:09:37.292741 (MainThread): WARNING: Found documentation for resource "my_second_dbt_model" which was not found or is disabled
+2021-07-06 22:09:37.292898 (MainThread): [WARNING]: Test 'test.pagila_pql.unique_my_first_dbt_model_id' (models/example/schema.yml) depends on a node named 'my_first_dbt_model' which was not found
+2021-07-06 22:09:37.293015 (MainThread): [WARNING]: Test 'test.pagila_pql.not_null_my_first_dbt_model_id' (models/example/schema.yml) depends on a node named 'my_first_dbt_model' which was not found
+2021-07-06 22:09:37.293094 (MainThread): [WARNING]: Test 'test.pagila_pql.unique_my_second_dbt_model_id' (models/example/schema.yml) depends on a node named 'my_second_dbt_model' which was not found
+2021-07-06 22:09:37.293163 (MainThread): [WARNING]: Test 'test.pagila_pql.not_null_my_second_dbt_model_id' (models/example/schema.yml) depends on a node named 'my_second_dbt_model' which was not found
+2021-07-06 22:09:37.297178 (MainThread): [WARNING]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.pagila_dest_tranformation.example
+
+2021-07-06 22:09:37.301321 (MainThread): Found 1 model, 0 tests, 0 snapshots, 0 analyses, 138 macros, 0 operations, 0 seed files, 0 sources, 0 exposures
+2021-07-06 22:09:37.302056 (MainThread): 
+2021-07-06 22:09:37.302371 (MainThread): Acquiring new postgres connection "master".
+2021-07-06 22:09:37.303146 (ThreadPoolExecutor-0_0): Acquiring new postgres connection "list_source_analytics".
+2021-07-06 22:09:37.311303 (ThreadPoolExecutor-0_0): Using postgres connection "list_source_analytics".
+2021-07-06 22:09:37.311529 (ThreadPoolExecutor-0_0): On list_source_analytics: /* {"app": "dbt", "dbt_version": "0.19.2", "profile_name": "normalize", "target_name": "prod", "connection_name": "list_source_analytics"} */
+
+    select distinct nspname from pg_namespace
+  
+2021-07-06 22:09:37.311611 (ThreadPoolExecutor-0_0): Opening a new connection, currently in state init
+2021-07-06 22:09:37.345821 (ThreadPoolExecutor-0_0): SQL status: SELECT 4 in 0.03 seconds
+2021-07-06 22:09:37.349348 (ThreadPoolExecutor-0_0): On list_source_analytics: Close
+2021-07-06 22:09:37.350626 (ThreadPoolExecutor-1_0): Acquiring new postgres connection "list_source_analytics_public".
+2021-07-06 22:09:37.356532 (ThreadPoolExecutor-1_0): Using postgres connection "list_source_analytics_public".
+2021-07-06 22:09:37.356664 (ThreadPoolExecutor-1_0): On list_source_analytics_public: BEGIN
+2021-07-06 22:09:37.356736 (ThreadPoolExecutor-1_0): Opening a new connection, currently in state closed
+2021-07-06 22:09:37.366092 (ThreadPoolExecutor-1_0): SQL status: BEGIN in 0.01 seconds
+2021-07-06 22:09:37.366260 (ThreadPoolExecutor-1_0): Using postgres connection "list_source_analytics_public".
+2021-07-06 22:09:37.366357 (ThreadPoolExecutor-1_0): On list_source_analytics_public: /* {"app": "dbt", "dbt_version": "0.19.2", "profile_name": "normalize", "target_name": "prod", "connection_name": "list_source_analytics_public"} */
+select
+      'source_analytics' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public'
+    union all
+    select
+      'source_analytics' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public'
+  
+2021-07-06 22:09:37.369653 (ThreadPoolExecutor-1_0): SQL status: SELECT 3 in 0.00 seconds
+2021-07-06 22:09:37.370353 (ThreadPoolExecutor-1_0): On list_source_analytics_public: ROLLBACK
+2021-07-06 22:09:37.372236 (ThreadPoolExecutor-1_0): On list_source_analytics_public: Close
+2021-07-06 22:09:37.376127 (MainThread): Using postgres connection "master".
+2021-07-06 22:09:37.376273 (MainThread): On master: BEGIN
+2021-07-06 22:09:37.376362 (MainThread): Opening a new connection, currently in state init
+2021-07-06 22:09:37.384857 (MainThread): SQL status: BEGIN in 0.01 seconds
+2021-07-06 22:09:37.385032 (MainThread): Using postgres connection "master".
+2021-07-06 22:09:37.385107 (MainThread): On master: /* {"app": "dbt", "dbt_version": "0.19.2", "profile_name": "normalize", "target_name": "prod", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+2021-07-06 22:09:37.389998 (MainThread): SQL status: SELECT 0 in 0.00 seconds
+2021-07-06 22:09:37.390330 (MainThread): On master: ROLLBACK
+2021-07-06 22:09:37.391251 (MainThread): Using postgres connection "master".
+2021-07-06 22:09:37.391376 (MainThread): On master: BEGIN
+2021-07-06 22:09:37.393606 (MainThread): SQL status: BEGIN in 0.00 seconds
+2021-07-06 22:09:37.393811 (MainThread): On master: COMMIT
+2021-07-06 22:09:37.393920 (MainThread): Using postgres connection "master".
+2021-07-06 22:09:37.393981 (MainThread): On master: COMMIT
+2021-07-06 22:09:37.395098 (MainThread): SQL status: COMMIT in 0.00 seconds
+2021-07-06 22:09:37.395277 (MainThread): On master: Close
+2021-07-06 22:09:37.395608 (MainThread): 15:09:37 | Concurrency: 32 threads (target='prod')
+2021-07-06 22:09:37.395745 (MainThread): 15:09:37 | 
+2021-07-06 22:09:37.400876 (Thread-1): Began running node model.pagila_pql.rental_stats
+2021-07-06 22:09:37.401165 (Thread-1): 15:09:37 | 1 of 1 START table model public.rental_stats................................................................. [RUN]
+2021-07-06 22:09:37.402275 (Thread-1): Acquiring new postgres connection "model.pagila_pql.rental_stats".
+2021-07-06 22:09:37.402445 (Thread-1): Compiling model.pagila_pql.rental_stats
+2021-07-06 22:09:37.404409 (Thread-1): Writing injected SQL for node "model.pagila_pql.rental_stats"
+2021-07-06 22:09:37.405265 (Thread-1): finished collecting timing info
+2021-07-06 22:09:37.420502 (Thread-1): Using postgres connection "model.pagila_pql.rental_stats".
+2021-07-06 22:09:37.420680 (Thread-1): On model.pagila_pql.rental_stats: /* {"app": "dbt", "dbt_version": "0.19.2", "profile_name": "normalize", "target_name": "prod", "node_id": "model.pagila_pql.rental_stats"} */
+drop table if exists "source_analytics"."public"."rental_stats__dbt_tmp" cascade
+2021-07-06 22:09:37.420753 (Thread-1): Opening a new connection, currently in state closed
+2021-07-06 22:09:37.429571 (Thread-1): SQL status: DROP TABLE in 0.01 seconds
+2021-07-06 22:09:37.431503 (Thread-1): Using postgres connection "model.pagila_pql.rental_stats".
+2021-07-06 22:09:37.431627 (Thread-1): On model.pagila_pql.rental_stats: /* {"app": "dbt", "dbt_version": "0.19.2", "profile_name": "normalize", "target_name": "prod", "node_id": "model.pagila_pql.rental_stats"} */
+drop table if exists "source_analytics"."public"."rental_stats__dbt_backup" cascade
+2021-07-06 22:09:37.433072 (Thread-1): SQL status: DROP TABLE in 0.00 seconds
+2021-07-06 22:09:37.442618 (Thread-1): Writing runtime SQL for node "model.pagila_pql.rental_stats"
+2021-07-06 22:09:37.443299 (Thread-1): Using postgres connection "model.pagila_pql.rental_stats".
+2021-07-06 22:09:37.443383 (Thread-1): On model.pagila_pql.rental_stats: BEGIN
+2021-07-06 22:09:37.445049 (Thread-1): SQL status: BEGIN in 0.00 seconds
+2021-07-06 22:09:37.445186 (Thread-1): Using postgres connection "model.pagila_pql.rental_stats".
+2021-07-06 22:09:37.445244 (Thread-1): On model.pagila_pql.rental_stats: /* {"app": "dbt", "dbt_version": "0.19.2", "profile_name": "normalize", "target_name": "prod", "node_id": "model.pagila_pql.rental_stats"} */
+
+
+  create  table "source_analytics"."public"."rental_stats__dbt_tmp"
+  as (
+    /*
+    Welcome to your first dbt model!
+    Did you know that you can also configure models directly within SQL files?
+    This will override configurations stated in dbt_project.yml
+
+    Try changing "table" to "view" below
+*/
+
+
+
+WITH enriched_data as (
+    SELECT *,
+        date_part('week', to_date(r.rental_date, 'YYYY/MM/DD')) AS rental_week,
+        date_part('year', to_date(r.rental_date, 'YYYY/MM/DD'))  AS rental_year,
+        date_part('week', to_date(r.return_date, 'YYYY/MM/DD')) AS return_week,
+        date_part('year', to_date(r.return_date, 'YYYY/MM/DD')) AS return_year
+    FROM rental r 
+)
+
+WITH rental_stats as (
+    SELECT 
+        CASE 
+            WHEN agg_returns.WeekBeginning ISNULL THEN open_rentals.WeekBeginning
+            ELSE agg_returns.WeekBeginning
+        END as WeekBeginning,
+        agg_returns.ReturnedRentals,
+        open_rentals.OutstandingRentals
+
+    FROM (
+        SELECT returned_info.WeekBeginning, SUM(returned_info.ReturnedRentals) AS ReturnedRentals
+        FROM(
+                SELECT date_trunc('week', return_date::timestamp)::date AS WeekBeginning, count(*) AS ReturnedRentals
+                FROM enriched_rental er 
+                WHERE rental_week = return_week and rental_year = return_year 
+                GROUP BY date_trunc('week', return_date::timestamp)::date
+            UNION ALL
+                SELECT date_trunc('week', return_date::timestamp)::date AS WeekBeginning, count(*) AS ReturnedRentals
+                FROM enriched_rental er 
+                WHERE rental_week != return_week
+                GROUP BY date_trunc('week', return_date::timestamp)::date
+                ) returned_info
+        GROUP BY returned_info.WeekBeginning ) AS agg_returns
+    FULL JOIN (
+        SELECT date_trunc('week', rental_date ::timestamp)::date AS WeekBeginning, count(*) AS OutstandingRentals
+        FROM enriched_rental er 
+        WHERE rental_week != return_week or return_week ISNULL
+        GROUP BY date_trunc('week', rental_date ::timestamp)::date
+    ) AS open_rentals ON open_rentals.WeekBeginning = agg_returns.WeekBeginning
+    ORDER BY WeekBeginning
+)
+  );
+2021-07-06 22:09:37.446465 (Thread-1): Postgres error: syntax error at or near "WITH"
+LINE 25: WITH rental_stats as (
+         ^
+
+2021-07-06 22:09:37.446588 (Thread-1): On model.pagila_pql.rental_stats: ROLLBACK
+2021-07-06 22:09:37.447491 (Thread-1): finished collecting timing info
+2021-07-06 22:09:37.447630 (Thread-1): On model.pagila_pql.rental_stats: Close
+2021-07-06 22:09:37.447965 (Thread-1): Database Error in model rental_stats (models/example/rental_stats.sql)
+  syntax error at or near "WITH"
+  LINE 25: WITH rental_stats as (
+           ^
+  compiled SQL at target/run/pagila_pql/models/example/rental_stats.sql
+Traceback (most recent call last):
+  File "/Users/mversage003/opt/anaconda3/lib/python3.8/site-packages/dbt/adapters/postgres/connections.py", line 47, in exception_handler
+    yield
+  File "/Users/mversage003/opt/anaconda3/lib/python3.8/site-packages/dbt/adapters/sql/connections.py", line 80, in add_query
+    cursor.execute(sql, bindings)
+psycopg2.errors.SyntaxError: syntax error at or near "WITH"
+LINE 25: WITH rental_stats as (
+         ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/mversage003/opt/anaconda3/lib/python3.8/site-packages/dbt/task/base.py", line 344, in safe_run
+    result = self.compile_and_execute(manifest, ctx)
+  File "/Users/mversage003/opt/anaconda3/lib/python3.8/site-packages/dbt/task/base.py", line 287, in compile_and_execute
+    result = self.run(ctx.node, manifest)
+  File "/Users/mversage003/opt/anaconda3/lib/python3.8/site-packages/dbt/task/base.py", line 389, in run
+    return self.execute(compiled_node, manifest)
+  File "/Users/mversage003/opt/anaconda3/lib/python3.8/site-packages/dbt/task/run.py", line 248, in execute
+    result = MacroGenerator(materialization_macro, context)()
+  File "/Users/mversage003/opt/anaconda3/lib/python3.8/site-packages/dbt/clients/jinja.py", line 332, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/Users/mversage003/opt/anaconda3/lib/python3.8/site-packages/dbt/clients/jinja.py", line 259, in call_macro
+    return macro(*args, **kwargs)
+  File "/Users/mversage003/opt/anaconda3/lib/python3.8/site-packages/jinja2/runtime.py", line 675, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/Users/mversage003/opt/anaconda3/lib/python3.8/site-packages/jinja2/runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 63, in macro
+  File "/Users/mversage003/opt/anaconda3/lib/python3.8/site-packages/jinja2/sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/Users/mversage003/opt/anaconda3/lib/python3.8/site-packages/jinja2/runtime.py", line 290, in call
+    return __obj(*args, **kwargs)
+  File "/Users/mversage003/opt/anaconda3/lib/python3.8/site-packages/dbt/clients/jinja.py", line 332, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/Users/mversage003/opt/anaconda3/lib/python3.8/site-packages/dbt/clients/jinja.py", line 259, in call_macro
+    return macro(*args, **kwargs)
+  File "/Users/mversage003/opt/anaconda3/lib/python3.8/site-packages/jinja2/runtime.py", line 675, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/Users/mversage003/opt/anaconda3/lib/python3.8/site-packages/jinja2/runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 41, in macro
+  File "/Users/mversage003/opt/anaconda3/lib/python3.8/site-packages/jinja2/sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/Users/mversage003/opt/anaconda3/lib/python3.8/site-packages/jinja2/runtime.py", line 290, in call
+    return __obj(*args, **kwargs)
+  File "/Users/mversage003/opt/anaconda3/lib/python3.8/site-packages/dbt/adapters/base/impl.py", line 227, in execute
+    return self.connections.execute(
+  File "/Users/mversage003/opt/anaconda3/lib/python3.8/site-packages/dbt/adapters/sql/connections.py", line 124, in execute
+    _, cursor = self.add_query(sql, auto_begin)
+  File "/Users/mversage003/opt/anaconda3/lib/python3.8/site-packages/dbt/adapters/sql/connections.py", line 87, in add_query
+    return connection, cursor
+  File "/Users/mversage003/opt/anaconda3/lib/python3.8/contextlib.py", line 131, in __exit__
+    self.gen.throw(type, value, traceback)
+  File "/Users/mversage003/opt/anaconda3/lib/python3.8/site-packages/dbt/adapters/postgres/connections.py", line 58, in exception_handler
+    raise dbt.exceptions.DatabaseException(str(e).strip()) from e
+dbt.exceptions.DatabaseException: Database Error in model rental_stats (models/example/rental_stats.sql)
+  syntax error at or near "WITH"
+  LINE 25: WITH rental_stats as (
+           ^
+  compiled SQL at target/run/pagila_pql/models/example/rental_stats.sql
+2021-07-06 22:09:37.451723 (Thread-1): 15:09:37 | 1 of 1 ERROR creating table model public.rental_stats........................................................ [ERROR in 0.05s]
+2021-07-06 22:09:37.451872 (Thread-1): Finished running node model.pagila_pql.rental_stats
+2021-07-06 22:09:37.453963 (MainThread): Acquiring new postgres connection "master".
+2021-07-06 22:09:37.454149 (MainThread): Using postgres connection "master".
+2021-07-06 22:09:37.454227 (MainThread): On master: BEGIN
+2021-07-06 22:09:37.454295 (MainThread): Opening a new connection, currently in state closed
+2021-07-06 22:09:37.465194 (MainThread): SQL status: BEGIN in 0.01 seconds
+2021-07-06 22:09:37.465380 (MainThread): On master: COMMIT
+2021-07-06 22:09:37.465456 (MainThread): Using postgres connection "master".
+2021-07-06 22:09:37.465514 (MainThread): On master: COMMIT
+2021-07-06 22:09:37.466794 (MainThread): SQL status: COMMIT in 0.00 seconds
+2021-07-06 22:09:37.466949 (MainThread): On master: Close
+2021-07-06 22:09:37.467282 (MainThread): 15:09:37 | 
+2021-07-06 22:09:37.467416 (MainThread): 15:09:37 | Finished running 1 table model in 0.17s.
+2021-07-06 22:09:37.467530 (MainThread): Connection 'master' was properly closed.
+2021-07-06 22:09:37.467614 (MainThread): Connection 'model.pagila_pql.rental_stats' was properly closed.
+2021-07-06 22:09:37.471952 (MainThread): 
+2021-07-06 22:09:37.472136 (MainThread): Completed with 1 error and 0 warnings:
+2021-07-06 22:09:37.472240 (MainThread): 
+2021-07-06 22:09:37.472320 (MainThread): Database Error in model rental_stats (models/example/rental_stats.sql)
+2021-07-06 22:09:37.472471 (MainThread):   syntax error at or near "WITH"
+2021-07-06 22:09:37.472581 (MainThread):   LINE 25: WITH rental_stats as (
+2021-07-06 22:09:37.472712 (MainThread):            ^
+2021-07-06 22:09:37.472876 (MainThread):   compiled SQL at target/run/pagila_pql/models/example/rental_stats.sql
+2021-07-06 22:09:37.472980 (MainThread): 
+Done. PASS=0 WARN=0 ERROR=1 SKIP=0 TOTAL=1
+2021-07-06 22:09:37.473159 (MainThread): Flushing usage events
+2021-07-06 22:10:07.809348 (MainThread): Running with dbt=0.19.2
+2021-07-06 22:10:07.875841 (MainThread): running dbt with arguments Namespace(cls=<class 'dbt.task.run.RunTask'>, debug=False, defer=None, exclude=None, fail_fast=False, full_refresh=False, log_cache_events=False, log_format='default', models=None, partial_parse=None, profile=None, profiles_dir='/Users/mversage003/.dbt', project_dir=None, record_timing_info=None, rpc_method='run', selector_name=None, single_threaded=False, state=None, strict=False, target=None, test_new_parser=False, threads=None, use_cache=True, use_colors=None, vars='{}', version_check=True, warn_error=False, which='run', write_json=True)
+2021-07-06 22:10:07.877175 (MainThread): Tracking: do not track
+2021-07-06 22:10:07.931159 (MainThread): Got an acceptable cached parse result
+2021-07-06 22:10:08.093516 (MainThread): Acquiring new postgres connection "model.pagila_pql.rental_stats".
+2021-07-06 22:10:08.138834 (MainThread): WARNING: Found documentation for resource "my_first_dbt_model" which was not found or is disabled
+2021-07-06 22:10:08.138956 (MainThread): WARNING: Found documentation for resource "my_second_dbt_model" which was not found or is disabled
+2021-07-06 22:10:08.139136 (MainThread): [WARNING]: Test 'test.pagila_pql.unique_my_first_dbt_model_id' (models/example/schema.yml) depends on a node named 'my_first_dbt_model' which was not found
+2021-07-06 22:10:08.139264 (MainThread): [WARNING]: Test 'test.pagila_pql.not_null_my_first_dbt_model_id' (models/example/schema.yml) depends on a node named 'my_first_dbt_model' which was not found
+2021-07-06 22:10:08.139346 (MainThread): [WARNING]: Test 'test.pagila_pql.unique_my_second_dbt_model_id' (models/example/schema.yml) depends on a node named 'my_second_dbt_model' which was not found
+2021-07-06 22:10:08.139423 (MainThread): [WARNING]: Test 'test.pagila_pql.not_null_my_second_dbt_model_id' (models/example/schema.yml) depends on a node named 'my_second_dbt_model' which was not found
+2021-07-06 22:10:08.143330 (MainThread): [WARNING]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.pagila_dest_tranformation.example
+
+2021-07-06 22:10:08.148465 (MainThread): Found 1 model, 0 tests, 0 snapshots, 0 analyses, 138 macros, 0 operations, 0 seed files, 0 sources, 0 exposures
+2021-07-06 22:10:08.149404 (MainThread): 
+2021-07-06 22:10:08.149742 (MainThread): Acquiring new postgres connection "master".
+2021-07-06 22:10:08.150507 (ThreadPoolExecutor-0_0): Acquiring new postgres connection "list_source_analytics".
+2021-07-06 22:10:08.158611 (ThreadPoolExecutor-0_0): Using postgres connection "list_source_analytics".
+2021-07-06 22:10:08.158749 (ThreadPoolExecutor-0_0): On list_source_analytics: /* {"app": "dbt", "dbt_version": "0.19.2", "profile_name": "normalize", "target_name": "prod", "connection_name": "list_source_analytics"} */
+
+    select distinct nspname from pg_namespace
+  
+2021-07-06 22:10:08.158826 (ThreadPoolExecutor-0_0): Opening a new connection, currently in state init
+2021-07-06 22:10:08.191906 (ThreadPoolExecutor-0_0): SQL status: SELECT 4 in 0.03 seconds
+2021-07-06 22:10:08.195618 (ThreadPoolExecutor-0_0): On list_source_analytics: Close
+2021-07-06 22:10:08.197730 (ThreadPoolExecutor-1_0): Acquiring new postgres connection "list_source_analytics_public".
+2021-07-06 22:10:08.203128 (ThreadPoolExecutor-1_0): Using postgres connection "list_source_analytics_public".
+2021-07-06 22:10:08.203270 (ThreadPoolExecutor-1_0): On list_source_analytics_public: BEGIN
+2021-07-06 22:10:08.203346 (ThreadPoolExecutor-1_0): Opening a new connection, currently in state closed
+2021-07-06 22:10:08.215750 (ThreadPoolExecutor-1_0): SQL status: BEGIN in 0.01 seconds
+2021-07-06 22:10:08.215913 (ThreadPoolExecutor-1_0): Using postgres connection "list_source_analytics_public".
+2021-07-06 22:10:08.215985 (ThreadPoolExecutor-1_0): On list_source_analytics_public: /* {"app": "dbt", "dbt_version": "0.19.2", "profile_name": "normalize", "target_name": "prod", "connection_name": "list_source_analytics_public"} */
+select
+      'source_analytics' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public'
+    union all
+    select
+      'source_analytics' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public'
+  
+2021-07-06 22:10:08.219206 (ThreadPoolExecutor-1_0): SQL status: SELECT 3 in 0.00 seconds
+2021-07-06 22:10:08.220000 (ThreadPoolExecutor-1_0): On list_source_analytics_public: ROLLBACK
+2021-07-06 22:10:08.221136 (ThreadPoolExecutor-1_0): On list_source_analytics_public: Close
+2021-07-06 22:10:08.225181 (MainThread): Using postgres connection "master".
+2021-07-06 22:10:08.225346 (MainThread): On master: BEGIN
+2021-07-06 22:10:08.225419 (MainThread): Opening a new connection, currently in state init
+2021-07-06 22:10:08.235597 (MainThread): SQL status: BEGIN in 0.01 seconds
+2021-07-06 22:10:08.235758 (MainThread): Using postgres connection "master".
+2021-07-06 22:10:08.235831 (MainThread): On master: /* {"app": "dbt", "dbt_version": "0.19.2", "profile_name": "normalize", "target_name": "prod", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+2021-07-06 22:10:08.240882 (MainThread): SQL status: SELECT 0 in 0.00 seconds
+2021-07-06 22:10:08.241210 (MainThread): On master: ROLLBACK
+2021-07-06 22:10:08.242463 (MainThread): Using postgres connection "master".
+2021-07-06 22:10:08.242605 (MainThread): On master: BEGIN
+2021-07-06 22:10:08.245267 (MainThread): SQL status: BEGIN in 0.00 seconds
+2021-07-06 22:10:08.245497 (MainThread): On master: COMMIT
+2021-07-06 22:10:08.245618 (MainThread): Using postgres connection "master".
+2021-07-06 22:10:08.245690 (MainThread): On master: COMMIT
+2021-07-06 22:10:08.247180 (MainThread): SQL status: COMMIT in 0.00 seconds
+2021-07-06 22:10:08.247370 (MainThread): On master: Close
+2021-07-06 22:10:08.247672 (MainThread): 15:10:08 | Concurrency: 32 threads (target='prod')
+2021-07-06 22:10:08.247822 (MainThread): 15:10:08 | 
+2021-07-06 22:10:08.253873 (Thread-1): Began running node model.pagila_pql.rental_stats
+2021-07-06 22:10:08.254166 (Thread-1): 15:10:08 | 1 of 1 START table model public.rental_stats................................................................. [RUN]
+2021-07-06 22:10:08.254511 (Thread-1): Acquiring new postgres connection "model.pagila_pql.rental_stats".
+2021-07-06 22:10:08.254672 (Thread-1): Compiling model.pagila_pql.rental_stats
+2021-07-06 22:10:08.256778 (Thread-1): Writing injected SQL for node "model.pagila_pql.rental_stats"
+2021-07-06 22:10:08.257420 (Thread-1): finished collecting timing info
+2021-07-06 22:10:08.272803 (Thread-1): Using postgres connection "model.pagila_pql.rental_stats".
+2021-07-06 22:10:08.272941 (Thread-1): On model.pagila_pql.rental_stats: /* {"app": "dbt", "dbt_version": "0.19.2", "profile_name": "normalize", "target_name": "prod", "node_id": "model.pagila_pql.rental_stats"} */
+drop table if exists "source_analytics"."public"."rental_stats__dbt_tmp" cascade
+2021-07-06 22:10:08.273016 (Thread-1): Opening a new connection, currently in state closed
+2021-07-06 22:10:08.282283 (Thread-1): SQL status: DROP TABLE in 0.01 seconds
+2021-07-06 22:10:08.284551 (Thread-1): Using postgres connection "model.pagila_pql.rental_stats".
+2021-07-06 22:10:08.284691 (Thread-1): On model.pagila_pql.rental_stats: /* {"app": "dbt", "dbt_version": "0.19.2", "profile_name": "normalize", "target_name": "prod", "node_id": "model.pagila_pql.rental_stats"} */
+drop table if exists "source_analytics"."public"."rental_stats__dbt_backup" cascade
+2021-07-06 22:10:08.286324 (Thread-1): SQL status: DROP TABLE in 0.00 seconds
+2021-07-06 22:10:08.295121 (Thread-1): Writing runtime SQL for node "model.pagila_pql.rental_stats"
+2021-07-06 22:10:08.296082 (Thread-1): Using postgres connection "model.pagila_pql.rental_stats".
+2021-07-06 22:10:08.296239 (Thread-1): On model.pagila_pql.rental_stats: BEGIN
+2021-07-06 22:10:08.298409 (Thread-1): SQL status: BEGIN in 0.00 seconds
+2021-07-06 22:10:08.298606 (Thread-1): Using postgres connection "model.pagila_pql.rental_stats".
+2021-07-06 22:10:08.298703 (Thread-1): On model.pagila_pql.rental_stats: /* {"app": "dbt", "dbt_version": "0.19.2", "profile_name": "normalize", "target_name": "prod", "node_id": "model.pagila_pql.rental_stats"} */
+
+
+  create  table "source_analytics"."public"."rental_stats__dbt_tmp"
+  as (
+    /*
+    Welcome to your first dbt model!
+    Did you know that you can also configure models directly within SQL files?
+    This will override configurations stated in dbt_project.yml
+
+    Try changing "table" to "view" below
+*/
+
+
+
+WITH enriched_data as (
+    SELECT *,
+        date_part('week', to_date(r.rental_date, 'YYYY/MM/DD')) AS rental_week,
+        date_part('year', to_date(r.rental_date, 'YYYY/MM/DD'))  AS rental_year,
+        date_part('week', to_date(r.return_date, 'YYYY/MM/DD')) AS return_week,
+        date_part('year', to_date(r.return_date, 'YYYY/MM/DD')) AS return_year
+    FROM rental r 
+)
+
+WITH rental_stats as (
+    SELECT 
+        CASE 
+            WHEN agg_returns.WeekBeginning ISNULL THEN open_rentals.WeekBeginning
+            ELSE agg_returns.WeekBeginning
+        END as WeekBeginning,
+        agg_returns.ReturnedRentals,
+        open_rentals.OutstandingRentals
+
+    FROM (
+        SELECT returned_info.WeekBeginning, SUM(returned_info.ReturnedRentals) AS ReturnedRentals
+        FROM(
+                SELECT date_trunc('week', return_date::timestamp)::date AS WeekBeginning, count(*) AS ReturnedRentals
+                FROM enriched_rental er 
+                WHERE rental_week = return_week and rental_year = return_year 
+                GROUP BY date_trunc('week', return_date::timestamp)::date
+            UNION ALL
+                SELECT date_trunc('week', return_date::timestamp)::date AS WeekBeginning, count(*) AS ReturnedRentals
+                FROM enriched_rental er 
+                WHERE rental_week != return_week
+                GROUP BY date_trunc('week', return_date::timestamp)::date
+                ) returned_info
+        GROUP BY returned_info.WeekBeginning ) AS agg_returns
+    FULL JOIN (
+        SELECT date_trunc('week', rental_date ::timestamp)::date AS WeekBeginning, count(*) AS OutstandingRentals
+        FROM enriched_rental er 
+        WHERE rental_week != return_week or return_week ISNULL
+        GROUP BY date_trunc('week', rental_date ::timestamp)::date
+    ) AS open_rentals ON open_rentals.WeekBeginning = agg_returns.WeekBeginning
+    ORDER BY WeekBeginning
+)
+
+
+SELECT * 
+FROM rental_stats
+  );
+2021-07-06 22:10:08.300430 (Thread-1): Postgres error: syntax error at or near "WITH"
+LINE 25: WITH rental_stats as (
+         ^
+
+2021-07-06 22:10:08.300602 (Thread-1): On model.pagila_pql.rental_stats: ROLLBACK
+2021-07-06 22:10:08.301766 (Thread-1): finished collecting timing info
+2021-07-06 22:10:08.301960 (Thread-1): On model.pagila_pql.rental_stats: Close
+2021-07-06 22:10:08.302408 (Thread-1): Database Error in model rental_stats (models/example/rental_stats.sql)
+  syntax error at or near "WITH"
+  LINE 25: WITH rental_stats as (
+           ^
+  compiled SQL at target/run/pagila_pql/models/example/rental_stats.sql
+Traceback (most recent call last):
+  File "/Users/mversage003/opt/anaconda3/lib/python3.8/site-packages/dbt/adapters/postgres/connections.py", line 47, in exception_handler
+    yield
+  File "/Users/mversage003/opt/anaconda3/lib/python3.8/site-packages/dbt/adapters/sql/connections.py", line 80, in add_query
+    cursor.execute(sql, bindings)
+psycopg2.errors.SyntaxError: syntax error at or near "WITH"
+LINE 25: WITH rental_stats as (
+         ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/mversage003/opt/anaconda3/lib/python3.8/site-packages/dbt/task/base.py", line 344, in safe_run
+    result = self.compile_and_execute(manifest, ctx)
+  File "/Users/mversage003/opt/anaconda3/lib/python3.8/site-packages/dbt/task/base.py", line 287, in compile_and_execute
+    result = self.run(ctx.node, manifest)
+  File "/Users/mversage003/opt/anaconda3/lib/python3.8/site-packages/dbt/task/base.py", line 389, in run
+    return self.execute(compiled_node, manifest)
+  File "/Users/mversage003/opt/anaconda3/lib/python3.8/site-packages/dbt/task/run.py", line 248, in execute
+    result = MacroGenerator(materialization_macro, context)()
+  File "/Users/mversage003/opt/anaconda3/lib/python3.8/site-packages/dbt/clients/jinja.py", line 332, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/Users/mversage003/opt/anaconda3/lib/python3.8/site-packages/dbt/clients/jinja.py", line 259, in call_macro
+    return macro(*args, **kwargs)
+  File "/Users/mversage003/opt/anaconda3/lib/python3.8/site-packages/jinja2/runtime.py", line 675, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/Users/mversage003/opt/anaconda3/lib/python3.8/site-packages/jinja2/runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 63, in macro
+  File "/Users/mversage003/opt/anaconda3/lib/python3.8/site-packages/jinja2/sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/Users/mversage003/opt/anaconda3/lib/python3.8/site-packages/jinja2/runtime.py", line 290, in call
+    return __obj(*args, **kwargs)
+  File "/Users/mversage003/opt/anaconda3/lib/python3.8/site-packages/dbt/clients/jinja.py", line 332, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/Users/mversage003/opt/anaconda3/lib/python3.8/site-packages/dbt/clients/jinja.py", line 259, in call_macro
+    return macro(*args, **kwargs)
+  File "/Users/mversage003/opt/anaconda3/lib/python3.8/site-packages/jinja2/runtime.py", line 675, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/Users/mversage003/opt/anaconda3/lib/python3.8/site-packages/jinja2/runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 41, in macro
+  File "/Users/mversage003/opt/anaconda3/lib/python3.8/site-packages/jinja2/sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/Users/mversage003/opt/anaconda3/lib/python3.8/site-packages/jinja2/runtime.py", line 290, in call
+    return __obj(*args, **kwargs)
+  File "/Users/mversage003/opt/anaconda3/lib/python3.8/site-packages/dbt/adapters/base/impl.py", line 227, in execute
+    return self.connections.execute(
+  File "/Users/mversage003/opt/anaconda3/lib/python3.8/site-packages/dbt/adapters/sql/connections.py", line 124, in execute
+    _, cursor = self.add_query(sql, auto_begin)
+  File "/Users/mversage003/opt/anaconda3/lib/python3.8/site-packages/dbt/adapters/sql/connections.py", line 87, in add_query
+    return connection, cursor
+  File "/Users/mversage003/opt/anaconda3/lib/python3.8/contextlib.py", line 131, in __exit__
+    self.gen.throw(type, value, traceback)
+  File "/Users/mversage003/opt/anaconda3/lib/python3.8/site-packages/dbt/adapters/postgres/connections.py", line 58, in exception_handler
+    raise dbt.exceptions.DatabaseException(str(e).strip()) from e
+dbt.exceptions.DatabaseException: Database Error in model rental_stats (models/example/rental_stats.sql)
+  syntax error at or near "WITH"
+  LINE 25: WITH rental_stats as (
+           ^
+  compiled SQL at target/run/pagila_pql/models/example/rental_stats.sql
+2021-07-06 22:10:08.306552 (Thread-1): 15:10:08 | 1 of 1 ERROR creating table model public.rental_stats........................................................ [ERROR in 0.05s]
+2021-07-06 22:10:08.306773 (Thread-1): Finished running node model.pagila_pql.rental_stats
+2021-07-06 22:10:08.308824 (MainThread): Acquiring new postgres connection "master".
+2021-07-06 22:10:08.308984 (MainThread): Using postgres connection "master".
+2021-07-06 22:10:08.309054 (MainThread): On master: BEGIN
+2021-07-06 22:10:08.309122 (MainThread): Opening a new connection, currently in state closed
+2021-07-06 22:10:08.319741 (MainThread): SQL status: BEGIN in 0.01 seconds
+2021-07-06 22:10:08.320037 (MainThread): On master: COMMIT
+2021-07-06 22:10:08.320156 (MainThread): Using postgres connection "master".
+2021-07-06 22:10:08.320221 (MainThread): On master: COMMIT
+2021-07-06 22:10:08.321482 (MainThread): SQL status: COMMIT in 0.00 seconds
+2021-07-06 22:10:08.321625 (MainThread): On master: Close
+2021-07-06 22:10:08.321922 (MainThread): 15:10:08 | 
+2021-07-06 22:10:08.322025 (MainThread): 15:10:08 | Finished running 1 table model in 0.17s.
+2021-07-06 22:10:08.322180 (MainThread): Connection 'master' was properly closed.
+2021-07-06 22:10:08.322294 (MainThread): Connection 'model.pagila_pql.rental_stats' was properly closed.
+2021-07-06 22:10:08.326174 (MainThread): 
+2021-07-06 22:10:08.326329 (MainThread): Completed with 1 error and 0 warnings:
+2021-07-06 22:10:08.326418 (MainThread): 
+2021-07-06 22:10:08.326498 (MainThread): Database Error in model rental_stats (models/example/rental_stats.sql)
+2021-07-06 22:10:08.326580 (MainThread):   syntax error at or near "WITH"
+2021-07-06 22:10:08.326663 (MainThread):   LINE 25: WITH rental_stats as (
+2021-07-06 22:10:08.326726 (MainThread):            ^
+2021-07-06 22:10:08.326788 (MainThread):   compiled SQL at target/run/pagila_pql/models/example/rental_stats.sql
+2021-07-06 22:10:08.326859 (MainThread): 
+Done. PASS=0 WARN=0 ERROR=1 SKIP=0 TOTAL=1
+2021-07-06 22:10:08.326987 (MainThread): Flushing usage events
+2021-07-06 22:11:55.583723 (MainThread): Running with dbt=0.19.2
+2021-07-06 22:11:55.661784 (MainThread): running dbt with arguments Namespace(cls=<class 'dbt.task.run.RunTask'>, debug=False, defer=None, exclude=None, fail_fast=False, full_refresh=False, log_cache_events=False, log_format='default', models=None, partial_parse=None, profile=None, profiles_dir='/Users/mversage003/.dbt', project_dir=None, record_timing_info=None, rpc_method='run', selector_name=None, single_threaded=False, state=None, strict=False, target=None, test_new_parser=False, threads=None, use_cache=True, use_colors=None, vars='{}', version_check=True, warn_error=False, which='run', write_json=True)
+2021-07-06 22:11:55.663959 (MainThread): Tracking: do not track
+2021-07-06 22:11:55.717457 (MainThread): Got an acceptable cached parse result
+2021-07-06 22:11:55.859746 (MainThread): Acquiring new postgres connection "model.pagila_pql.rental_stats".
+2021-07-06 22:11:55.927641 (MainThread): [WARNING]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.pagila_dest_tranformation.example
+
+2021-07-06 22:11:55.932023 (MainThread): Found 1 model, 2 tests, 0 snapshots, 0 analyses, 138 macros, 0 operations, 0 seed files, 0 sources, 0 exposures
+2021-07-06 22:11:55.932972 (MainThread): 
+2021-07-06 22:11:55.933364 (MainThread): Acquiring new postgres connection "master".
+2021-07-06 22:11:55.934438 (ThreadPoolExecutor-0_0): Acquiring new postgres connection "list_source_analytics".
+2021-07-06 22:11:55.943409 (ThreadPoolExecutor-0_0): Using postgres connection "list_source_analytics".
+2021-07-06 22:11:55.943569 (ThreadPoolExecutor-0_0): On list_source_analytics: /* {"app": "dbt", "dbt_version": "0.19.2", "profile_name": "normalize", "target_name": "prod", "connection_name": "list_source_analytics"} */
+
+    select distinct nspname from pg_namespace
+  
+2021-07-06 22:11:55.943686 (ThreadPoolExecutor-0_0): Opening a new connection, currently in state init
+2021-07-06 22:11:55.981280 (ThreadPoolExecutor-0_0): SQL status: SELECT 4 in 0.04 seconds
+2021-07-06 22:11:55.984349 (ThreadPoolExecutor-0_0): On list_source_analytics: Close
+2021-07-06 22:11:55.985546 (ThreadPoolExecutor-1_0): Acquiring new postgres connection "list_source_analytics_public".
+2021-07-06 22:11:55.990513 (ThreadPoolExecutor-1_0): Using postgres connection "list_source_analytics_public".
+2021-07-06 22:11:55.990656 (ThreadPoolExecutor-1_0): On list_source_analytics_public: BEGIN
+2021-07-06 22:11:55.990725 (ThreadPoolExecutor-1_0): Opening a new connection, currently in state closed
+2021-07-06 22:11:55.999280 (ThreadPoolExecutor-1_0): SQL status: BEGIN in 0.01 seconds
+2021-07-06 22:11:55.999452 (ThreadPoolExecutor-1_0): Using postgres connection "list_source_analytics_public".
+2021-07-06 22:11:55.999532 (ThreadPoolExecutor-1_0): On list_source_analytics_public: /* {"app": "dbt", "dbt_version": "0.19.2", "profile_name": "normalize", "target_name": "prod", "connection_name": "list_source_analytics_public"} */
+select
+      'source_analytics' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public'
+    union all
+    select
+      'source_analytics' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public'
+  
+2021-07-06 22:11:56.002868 (ThreadPoolExecutor-1_0): SQL status: SELECT 3 in 0.00 seconds
+2021-07-06 22:11:56.003434 (ThreadPoolExecutor-1_0): On list_source_analytics_public: ROLLBACK
+2021-07-06 22:11:56.004457 (ThreadPoolExecutor-1_0): On list_source_analytics_public: Close
+2021-07-06 22:11:56.008857 (MainThread): Using postgres connection "master".
+2021-07-06 22:11:56.009000 (MainThread): On master: BEGIN
+2021-07-06 22:11:56.009069 (MainThread): Opening a new connection, currently in state init
+2021-07-06 22:11:56.016974 (MainThread): SQL status: BEGIN in 0.01 seconds
+2021-07-06 22:11:56.017149 (MainThread): Using postgres connection "master".
+2021-07-06 22:11:56.017219 (MainThread): On master: /* {"app": "dbt", "dbt_version": "0.19.2", "profile_name": "normalize", "target_name": "prod", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+2021-07-06 22:11:56.021420 (MainThread): SQL status: SELECT 0 in 0.00 seconds
+2021-07-06 22:11:56.021743 (MainThread): On master: ROLLBACK
+2021-07-06 22:11:56.022740 (MainThread): Using postgres connection "master".
+2021-07-06 22:11:56.022836 (MainThread): On master: BEGIN
+2021-07-06 22:11:56.024540 (MainThread): SQL status: BEGIN in 0.00 seconds
+2021-07-06 22:11:56.024663 (MainThread): On master: COMMIT
+2021-07-06 22:11:56.024735 (MainThread): Using postgres connection "master".
+2021-07-06 22:11:56.024791 (MainThread): On master: COMMIT
+2021-07-06 22:11:56.025718 (MainThread): SQL status: COMMIT in 0.00 seconds
+2021-07-06 22:11:56.025836 (MainThread): On master: Close
+2021-07-06 22:11:56.026109 (MainThread): 15:11:56 | Concurrency: 32 threads (target='prod')
+2021-07-06 22:11:56.026257 (MainThread): 15:11:56 | 
+2021-07-06 22:11:56.031032 (Thread-1): Began running node model.pagila_pql.rental_stats
+2021-07-06 22:11:56.031312 (Thread-1): 15:11:56 | 1 of 1 START table model public.rental_stats................................................................. [RUN]
+2021-07-06 22:11:56.031582 (Thread-1): Acquiring new postgres connection "model.pagila_pql.rental_stats".
+2021-07-06 22:11:56.031685 (Thread-1): Compiling model.pagila_pql.rental_stats
+2021-07-06 22:11:56.033604 (Thread-1): Writing injected SQL for node "model.pagila_pql.rental_stats"
+2021-07-06 22:11:56.035131 (Thread-1): finished collecting timing info
+2021-07-06 22:11:56.049662 (Thread-1): Using postgres connection "model.pagila_pql.rental_stats".
+2021-07-06 22:11:56.049816 (Thread-1): On model.pagila_pql.rental_stats: /* {"app": "dbt", "dbt_version": "0.19.2", "profile_name": "normalize", "target_name": "prod", "node_id": "model.pagila_pql.rental_stats"} */
+drop table if exists "source_analytics"."public"."rental_stats__dbt_tmp" cascade
+2021-07-06 22:11:56.049892 (Thread-1): Opening a new connection, currently in state closed
+2021-07-06 22:11:56.057802 (Thread-1): SQL status: DROP TABLE in 0.01 seconds
+2021-07-06 22:11:56.059788 (Thread-1): Using postgres connection "model.pagila_pql.rental_stats".
+2021-07-06 22:11:56.059929 (Thread-1): On model.pagila_pql.rental_stats: /* {"app": "dbt", "dbt_version": "0.19.2", "profile_name": "normalize", "target_name": "prod", "node_id": "model.pagila_pql.rental_stats"} */
+drop table if exists "source_analytics"."public"."rental_stats__dbt_backup" cascade
+2021-07-06 22:11:56.061319 (Thread-1): SQL status: DROP TABLE in 0.00 seconds
+2021-07-06 22:11:56.070260 (Thread-1): Writing runtime SQL for node "model.pagila_pql.rental_stats"
+2021-07-06 22:11:56.071801 (Thread-1): Using postgres connection "model.pagila_pql.rental_stats".
+2021-07-06 22:11:56.071912 (Thread-1): On model.pagila_pql.rental_stats: BEGIN
+2021-07-06 22:11:56.073205 (Thread-1): SQL status: BEGIN in 0.00 seconds
+2021-07-06 22:11:56.073320 (Thread-1): Using postgres connection "model.pagila_pql.rental_stats".
+2021-07-06 22:11:56.073384 (Thread-1): On model.pagila_pql.rental_stats: /* {"app": "dbt", "dbt_version": "0.19.2", "profile_name": "normalize", "target_name": "prod", "node_id": "model.pagila_pql.rental_stats"} */
+
+
+  create  table "source_analytics"."public"."rental_stats__dbt_tmp"
+  as (
+    /*
+    Welcome to your first dbt model!
+    Did you know that you can also configure models directly within SQL files?
+    This will override configurations stated in dbt_project.yml
+
+    Try changing "table" to "view" below
+*/
+
+
+
+WITH enriched_data as (
+    SELECT *,
+        date_part('week', to_date(r.rental_date, 'YYYY/MM/DD')) AS rental_week,
+        date_part('year', to_date(r.rental_date, 'YYYY/MM/DD'))  AS rental_year,
+        date_part('week', to_date(r.return_date, 'YYYY/MM/DD')) AS return_week,
+        date_part('year', to_date(r.return_date, 'YYYY/MM/DD')) AS return_year
+    FROM rental r 
+)
+
+WITH rental_stats as (
+    SELECT 
+        CASE 
+            WHEN agg_returns.WeekBeginning ISNULL THEN open_rentals.WeekBeginning
+            ELSE agg_returns.WeekBeginning
+        END as WeekBeginning,
+        agg_returns.ReturnedRentals,
+        open_rentals.OutstandingRentals
+
+    FROM (
+        SELECT returned_info.WeekBeginning, SUM(returned_info.ReturnedRentals) AS ReturnedRentals
+        FROM(
+                SELECT date_trunc('week', return_date::timestamp)::date AS WeekBeginning, count(*) AS ReturnedRentals
+                FROM enriched_rental er 
+                WHERE rental_week = return_week and rental_year = return_year 
+                GROUP BY date_trunc('week', return_date::timestamp)::date
+            UNION ALL
+                SELECT date_trunc('week', return_date::timestamp)::date AS WeekBeginning, count(*) AS ReturnedRentals
+                FROM enriched_rental er 
+                WHERE rental_week != return_week
+                GROUP BY date_trunc('week', return_date::timestamp)::date
+                ) returned_info
+        GROUP BY returned_info.WeekBeginning ) AS agg_returns
+    FULL JOIN (
+        SELECT date_trunc('week', rental_date ::timestamp)::date AS WeekBeginning, count(*) AS OutstandingRentals
+        FROM enriched_rental er 
+        WHERE rental_week != return_week or return_week ISNULL
+        GROUP BY date_trunc('week', rental_date ::timestamp)::date
+    ) AS open_rentals ON open_rentals.WeekBeginning = agg_returns.WeekBeginning
+    ORDER BY WeekBeginning
+)
+
+
+SELECT * 
+FROM rental_stats
+  );
+2021-07-06 22:11:56.074754 (Thread-1): Postgres error: syntax error at or near "WITH"
+LINE 25: WITH rental_stats as (
+         ^
+
+2021-07-06 22:11:56.074855 (Thread-1): On model.pagila_pql.rental_stats: ROLLBACK
+2021-07-06 22:11:56.075900 (Thread-1): finished collecting timing info
+2021-07-06 22:11:56.076039 (Thread-1): On model.pagila_pql.rental_stats: Close
+2021-07-06 22:11:56.076314 (Thread-1): Database Error in model rental_stats (models/rental_stats.sql)
+  syntax error at or near "WITH"
+  LINE 25: WITH rental_stats as (
+           ^
+  compiled SQL at target/run/pagila_pql/models/rental_stats.sql
+Traceback (most recent call last):
+  File "/Users/mversage003/opt/anaconda3/lib/python3.8/site-packages/dbt/adapters/postgres/connections.py", line 47, in exception_handler
+    yield
+  File "/Users/mversage003/opt/anaconda3/lib/python3.8/site-packages/dbt/adapters/sql/connections.py", line 80, in add_query
+    cursor.execute(sql, bindings)
+psycopg2.errors.SyntaxError: syntax error at or near "WITH"
+LINE 25: WITH rental_stats as (
+         ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/mversage003/opt/anaconda3/lib/python3.8/site-packages/dbt/task/base.py", line 344, in safe_run
+    result = self.compile_and_execute(manifest, ctx)
+  File "/Users/mversage003/opt/anaconda3/lib/python3.8/site-packages/dbt/task/base.py", line 287, in compile_and_execute
+    result = self.run(ctx.node, manifest)
+  File "/Users/mversage003/opt/anaconda3/lib/python3.8/site-packages/dbt/task/base.py", line 389, in run
+    return self.execute(compiled_node, manifest)
+  File "/Users/mversage003/opt/anaconda3/lib/python3.8/site-packages/dbt/task/run.py", line 248, in execute
+    result = MacroGenerator(materialization_macro, context)()
+  File "/Users/mversage003/opt/anaconda3/lib/python3.8/site-packages/dbt/clients/jinja.py", line 332, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/Users/mversage003/opt/anaconda3/lib/python3.8/site-packages/dbt/clients/jinja.py", line 259, in call_macro
+    return macro(*args, **kwargs)
+  File "/Users/mversage003/opt/anaconda3/lib/python3.8/site-packages/jinja2/runtime.py", line 675, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/Users/mversage003/opt/anaconda3/lib/python3.8/site-packages/jinja2/runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 63, in macro
+  File "/Users/mversage003/opt/anaconda3/lib/python3.8/site-packages/jinja2/sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/Users/mversage003/opt/anaconda3/lib/python3.8/site-packages/jinja2/runtime.py", line 290, in call
+    return __obj(*args, **kwargs)
+  File "/Users/mversage003/opt/anaconda3/lib/python3.8/site-packages/dbt/clients/jinja.py", line 332, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/Users/mversage003/opt/anaconda3/lib/python3.8/site-packages/dbt/clients/jinja.py", line 259, in call_macro
+    return macro(*args, **kwargs)
+  File "/Users/mversage003/opt/anaconda3/lib/python3.8/site-packages/jinja2/runtime.py", line 675, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/Users/mversage003/opt/anaconda3/lib/python3.8/site-packages/jinja2/runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 41, in macro
+  File "/Users/mversage003/opt/anaconda3/lib/python3.8/site-packages/jinja2/sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/Users/mversage003/opt/anaconda3/lib/python3.8/site-packages/jinja2/runtime.py", line 290, in call
+    return __obj(*args, **kwargs)
+  File "/Users/mversage003/opt/anaconda3/lib/python3.8/site-packages/dbt/adapters/base/impl.py", line 227, in execute
+    return self.connections.execute(
+  File "/Users/mversage003/opt/anaconda3/lib/python3.8/site-packages/dbt/adapters/sql/connections.py", line 124, in execute
+    _, cursor = self.add_query(sql, auto_begin)
+  File "/Users/mversage003/opt/anaconda3/lib/python3.8/site-packages/dbt/adapters/sql/connections.py", line 87, in add_query
+    return connection, cursor
+  File "/Users/mversage003/opt/anaconda3/lib/python3.8/contextlib.py", line 131, in __exit__
+    self.gen.throw(type, value, traceback)
+  File "/Users/mversage003/opt/anaconda3/lib/python3.8/site-packages/dbt/adapters/postgres/connections.py", line 58, in exception_handler
+    raise dbt.exceptions.DatabaseException(str(e).strip()) from e
+dbt.exceptions.DatabaseException: Database Error in model rental_stats (models/rental_stats.sql)
+  syntax error at or near "WITH"
+  LINE 25: WITH rental_stats as (
+           ^
+  compiled SQL at target/run/pagila_pql/models/rental_stats.sql
+2021-07-06 22:11:56.079705 (Thread-1): 15:11:56 | 1 of 1 ERROR creating table model public.rental_stats........................................................ [ERROR in 0.05s]
+2021-07-06 22:11:56.079847 (Thread-1): Finished running node model.pagila_pql.rental_stats
+2021-07-06 22:11:56.081621 (MainThread): Acquiring new postgres connection "master".
+2021-07-06 22:11:56.081792 (MainThread): Using postgres connection "master".
+2021-07-06 22:11:56.081860 (MainThread): On master: BEGIN
+2021-07-06 22:11:56.081919 (MainThread): Opening a new connection, currently in state closed
+2021-07-06 22:11:56.089659 (MainThread): SQL status: BEGIN in 0.01 seconds
+2021-07-06 22:11:56.089840 (MainThread): On master: COMMIT
+2021-07-06 22:11:56.089915 (MainThread): Using postgres connection "master".
+2021-07-06 22:11:56.089971 (MainThread): On master: COMMIT
+2021-07-06 22:11:56.090886 (MainThread): SQL status: COMMIT in 0.00 seconds
+2021-07-06 22:11:56.091018 (MainThread): On master: Close
+2021-07-06 22:11:56.091292 (MainThread): 15:11:56 | 
+2021-07-06 22:11:56.091399 (MainThread): 15:11:56 | Finished running 1 table model in 0.16s.
+2021-07-06 22:11:56.091511 (MainThread): Connection 'master' was properly closed.
+2021-07-06 22:11:56.091576 (MainThread): Connection 'model.pagila_pql.rental_stats' was properly closed.
+2021-07-06 22:11:56.095166 (MainThread): 
+2021-07-06 22:11:56.095334 (MainThread): Completed with 1 error and 0 warnings:
+2021-07-06 22:11:56.095419 (MainThread): 
+2021-07-06 22:11:56.095491 (MainThread): Database Error in model rental_stats (models/rental_stats.sql)
+2021-07-06 22:11:56.095556 (MainThread):   syntax error at or near "WITH"
+2021-07-06 22:11:56.095615 (MainThread):   LINE 25: WITH rental_stats as (
+2021-07-06 22:11:56.095671 (MainThread):            ^
+2021-07-06 22:11:56.095728 (MainThread):   compiled SQL at target/run/pagila_pql/models/rental_stats.sql
+2021-07-06 22:11:56.095795 (MainThread): 
+Done. PASS=0 WARN=0 ERROR=1 SKIP=0 TOTAL=1
+2021-07-06 22:11:56.095916 (MainThread): Flushing usage events
+2021-07-06 22:14:57.893080 (MainThread): Running with dbt=0.19.2
+2021-07-06 22:14:57.980624 (MainThread): running dbt with arguments Namespace(cls=<class 'dbt.task.run.RunTask'>, debug=False, defer=None, exclude=None, fail_fast=False, full_refresh=False, log_cache_events=False, log_format='default', models=None, partial_parse=None, profile=None, profiles_dir='/Users/mversage003/.dbt', project_dir=None, record_timing_info=None, rpc_method='run', selector_name=None, single_threaded=False, state=None, strict=False, target=None, test_new_parser=False, threads=None, use_cache=True, use_colors=None, vars='{}', version_check=True, warn_error=False, which='run', write_json=True)
+2021-07-06 22:14:57.982490 (MainThread): Tracking: do not track
+2021-07-06 22:14:58.047160 (MainThread): Got an acceptable cached parse result
+2021-07-06 22:14:58.186997 (MainThread): Acquiring new postgres connection "model.pagila_pql.rental_stats".
+2021-07-06 22:14:58.241457 (MainThread): [WARNING]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.pagila_dest_tranformation.example
+
+2021-07-06 22:14:58.245879 (MainThread): Found 1 model, 2 tests, 0 snapshots, 0 analyses, 138 macros, 0 operations, 0 seed files, 0 sources, 0 exposures
+2021-07-06 22:14:58.246608 (MainThread): 
+2021-07-06 22:14:58.247056 (MainThread): Acquiring new postgres connection "master".
+2021-07-06 22:14:58.247919 (ThreadPoolExecutor-0_0): Acquiring new postgres connection "list_source_analytics".
+2021-07-06 22:14:58.256034 (ThreadPoolExecutor-0_0): Using postgres connection "list_source_analytics".
+2021-07-06 22:14:58.256219 (ThreadPoolExecutor-0_0): On list_source_analytics: /* {"app": "dbt", "dbt_version": "0.19.2", "profile_name": "normalize", "target_name": "prod", "connection_name": "list_source_analytics"} */
+
+    select distinct nspname from pg_namespace
+  
+2021-07-06 22:14:58.256292 (ThreadPoolExecutor-0_0): Opening a new connection, currently in state init
+2021-07-06 22:14:58.304326 (ThreadPoolExecutor-0_0): SQL status: SELECT 4 in 0.05 seconds
+2021-07-06 22:14:58.307634 (ThreadPoolExecutor-0_0): On list_source_analytics: Close
+2021-07-06 22:14:58.308681 (ThreadPoolExecutor-1_0): Acquiring new postgres connection "list_source_analytics_public".
+2021-07-06 22:14:58.313735 (ThreadPoolExecutor-1_0): Using postgres connection "list_source_analytics_public".
+2021-07-06 22:14:58.313891 (ThreadPoolExecutor-1_0): On list_source_analytics_public: BEGIN
+2021-07-06 22:14:58.313967 (ThreadPoolExecutor-1_0): Opening a new connection, currently in state closed
+2021-07-06 22:14:58.322079 (ThreadPoolExecutor-1_0): SQL status: BEGIN in 0.01 seconds
+2021-07-06 22:14:58.322250 (ThreadPoolExecutor-1_0): Using postgres connection "list_source_analytics_public".
+2021-07-06 22:14:58.322328 (ThreadPoolExecutor-1_0): On list_source_analytics_public: /* {"app": "dbt", "dbt_version": "0.19.2", "profile_name": "normalize", "target_name": "prod", "connection_name": "list_source_analytics_public"} */
+select
+      'source_analytics' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public'
+    union all
+    select
+      'source_analytics' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public'
+  
+2021-07-06 22:14:58.325136 (ThreadPoolExecutor-1_0): SQL status: SELECT 3 in 0.00 seconds
+2021-07-06 22:14:58.325670 (ThreadPoolExecutor-1_0): On list_source_analytics_public: ROLLBACK
+2021-07-06 22:14:58.326681 (ThreadPoolExecutor-1_0): On list_source_analytics_public: Close
+2021-07-06 22:14:58.330130 (MainThread): Using postgres connection "master".
+2021-07-06 22:14:58.330287 (MainThread): On master: BEGIN
+2021-07-06 22:14:58.330367 (MainThread): Opening a new connection, currently in state init
+2021-07-06 22:14:58.338936 (MainThread): SQL status: BEGIN in 0.01 seconds
+2021-07-06 22:14:58.339112 (MainThread): Using postgres connection "master".
+2021-07-06 22:14:58.339186 (MainThread): On master: /* {"app": "dbt", "dbt_version": "0.19.2", "profile_name": "normalize", "target_name": "prod", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+2021-07-06 22:14:58.343508 (MainThread): SQL status: SELECT 0 in 0.00 seconds
+2021-07-06 22:14:58.343839 (MainThread): On master: ROLLBACK
+2021-07-06 22:14:58.344764 (MainThread): Using postgres connection "master".
+2021-07-06 22:14:58.344853 (MainThread): On master: BEGIN
+2021-07-06 22:14:58.346483 (MainThread): SQL status: BEGIN in 0.00 seconds
+2021-07-06 22:14:58.346619 (MainThread): On master: COMMIT
+2021-07-06 22:14:58.346694 (MainThread): Using postgres connection "master".
+2021-07-06 22:14:58.346754 (MainThread): On master: COMMIT
+2021-07-06 22:14:58.347722 (MainThread): SQL status: COMMIT in 0.00 seconds
+2021-07-06 22:14:58.347868 (MainThread): On master: Close
+2021-07-06 22:14:58.348184 (MainThread): 15:14:58 | Concurrency: 32 threads (target='prod')
+2021-07-06 22:14:58.348325 (MainThread): 15:14:58 | 
+2021-07-06 22:14:58.354164 (Thread-1): Began running node model.pagila_pql.rental_stats
+2021-07-06 22:14:58.354458 (Thread-1): 15:14:58 | 1 of 1 START table model public.rental_stats................................................................. [RUN]
+2021-07-06 22:14:58.354724 (Thread-1): Acquiring new postgres connection "model.pagila_pql.rental_stats".
+2021-07-06 22:14:58.354824 (Thread-1): Compiling model.pagila_pql.rental_stats
+2021-07-06 22:14:58.356749 (Thread-1): Writing injected SQL for node "model.pagila_pql.rental_stats"
+2021-07-06 22:14:58.357673 (Thread-1): finished collecting timing info
+2021-07-06 22:14:58.373034 (Thread-1): Using postgres connection "model.pagila_pql.rental_stats".
+2021-07-06 22:14:58.373204 (Thread-1): On model.pagila_pql.rental_stats: /* {"app": "dbt", "dbt_version": "0.19.2", "profile_name": "normalize", "target_name": "prod", "node_id": "model.pagila_pql.rental_stats"} */
+drop table if exists "source_analytics"."public"."rental_stats__dbt_tmp" cascade
+2021-07-06 22:14:58.373285 (Thread-1): Opening a new connection, currently in state closed
+2021-07-06 22:14:58.381187 (Thread-1): SQL status: DROP TABLE in 0.01 seconds
+2021-07-06 22:14:58.383230 (Thread-1): Using postgres connection "model.pagila_pql.rental_stats".
+2021-07-06 22:14:58.383365 (Thread-1): On model.pagila_pql.rental_stats: /* {"app": "dbt", "dbt_version": "0.19.2", "profile_name": "normalize", "target_name": "prod", "node_id": "model.pagila_pql.rental_stats"} */
+drop table if exists "source_analytics"."public"."rental_stats__dbt_backup" cascade
+2021-07-06 22:14:58.384586 (Thread-1): SQL status: DROP TABLE in 0.00 seconds
+2021-07-06 22:14:58.392948 (Thread-1): Writing runtime SQL for node "model.pagila_pql.rental_stats"
+2021-07-06 22:14:58.393733 (Thread-1): Using postgres connection "model.pagila_pql.rental_stats".
+2021-07-06 22:14:58.393836 (Thread-1): On model.pagila_pql.rental_stats: BEGIN
+2021-07-06 22:14:58.395279 (Thread-1): SQL status: BEGIN in 0.00 seconds
+2021-07-06 22:14:58.395465 (Thread-1): Using postgres connection "model.pagila_pql.rental_stats".
+2021-07-06 22:14:58.395541 (Thread-1): On model.pagila_pql.rental_stats: /* {"app": "dbt", "dbt_version": "0.19.2", "profile_name": "normalize", "target_name": "prod", "node_id": "model.pagila_pql.rental_stats"} */
+
+
+  create  table "source_analytics"."public"."rental_stats__dbt_tmp"
+  as (
+    /*
+    Welcome to your first dbt model!
+    Did you know that you can also configure models directly within SQL files?
+    This will override configurations stated in dbt_project.yml
+
+    Try changing "table" to "view" below
+*/
+
+
+
+WITH enriched_data as (
+    SELECT *,
+        date_part('week', to_date(r.rental_date, 'YYYY/MM/DD')) AS rental_week,
+        date_part('year', to_date(r.rental_date, 'YYYY/MM/DD'))  AS rental_year,
+        date_part('week', to_date(r.return_date, 'YYYY/MM/DD')) AS return_week,
+        date_part('year', to_date(r.return_date, 'YYYY/MM/DD')) AS return_year
+    FROM rental r 
+), rental_stats as (
+    SELECT 
+        CASE 
+            WHEN agg_returns.WeekBeginning ISNULL THEN open_rentals.WeekBeginning
+            ELSE agg_returns.WeekBeginning
+        END as WeekBeginning,
+        agg_returns.ReturnedRentals,
+        open_rentals.OutstandingRentals
+
+    FROM (
+        SELECT returned_info.WeekBeginning, SUM(returned_info.ReturnedRentals) AS ReturnedRentals
+        FROM(
+                SELECT date_trunc('week', return_date::timestamp)::date AS WeekBeginning, count(*) AS ReturnedRentals
+                FROM enriched_rental er 
+                WHERE rental_week = return_week and rental_year = return_year 
+                GROUP BY date_trunc('week', return_date::timestamp)::date
+            UNION ALL
+                SELECT date_trunc('week', return_date::timestamp)::date AS WeekBeginning, count(*) AS ReturnedRentals
+                FROM enriched_rental er 
+                WHERE rental_week != return_week
+                GROUP BY date_trunc('week', return_date::timestamp)::date
+                ) returned_info
+        GROUP BY returned_info.WeekBeginning ) AS agg_returns
+    FULL JOIN (
+        SELECT date_trunc('week', rental_date ::timestamp)::date AS WeekBeginning, count(*) AS OutstandingRentals
+        FROM enriched_rental er 
+        WHERE rental_week != return_week or return_week ISNULL
+        GROUP BY date_trunc('week', rental_date ::timestamp)::date
+    ) AS open_rentals ON open_rentals.WeekBeginning = agg_returns.WeekBeginning
+    ORDER BY WeekBeginning
+)
+
+
+SELECT * 
+FROM rental_stats
+  );
+2021-07-06 22:14:58.397429 (Thread-1): Postgres error: relation "enriched_rental" does not exist
+LINE 36:                 FROM enriched_rental er 
+                              ^
+
+2021-07-06 22:14:58.397634 (Thread-1): On model.pagila_pql.rental_stats: ROLLBACK
+2021-07-06 22:14:58.399354 (Thread-1): finished collecting timing info
+2021-07-06 22:14:58.399583 (Thread-1): On model.pagila_pql.rental_stats: Close
+2021-07-06 22:14:58.400008 (Thread-1): Database Error in model rental_stats (models/rental_stats.sql)
+  relation "enriched_rental" does not exist
+  LINE 36:                 FROM enriched_rental er 
+                                ^
+  compiled SQL at target/run/pagila_pql/models/rental_stats.sql
+Traceback (most recent call last):
+  File "/Users/mversage003/opt/anaconda3/lib/python3.8/site-packages/dbt/adapters/postgres/connections.py", line 47, in exception_handler
+    yield
+  File "/Users/mversage003/opt/anaconda3/lib/python3.8/site-packages/dbt/adapters/sql/connections.py", line 80, in add_query
+    cursor.execute(sql, bindings)
+psycopg2.errors.UndefinedTable: relation "enriched_rental" does not exist
+LINE 36:                 FROM enriched_rental er 
+                              ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/mversage003/opt/anaconda3/lib/python3.8/site-packages/dbt/task/base.py", line 344, in safe_run
+    result = self.compile_and_execute(manifest, ctx)
+  File "/Users/mversage003/opt/anaconda3/lib/python3.8/site-packages/dbt/task/base.py", line 287, in compile_and_execute
+    result = self.run(ctx.node, manifest)
+  File "/Users/mversage003/opt/anaconda3/lib/python3.8/site-packages/dbt/task/base.py", line 389, in run
+    return self.execute(compiled_node, manifest)
+  File "/Users/mversage003/opt/anaconda3/lib/python3.8/site-packages/dbt/task/run.py", line 248, in execute
+    result = MacroGenerator(materialization_macro, context)()
+  File "/Users/mversage003/opt/anaconda3/lib/python3.8/site-packages/dbt/clients/jinja.py", line 332, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/Users/mversage003/opt/anaconda3/lib/python3.8/site-packages/dbt/clients/jinja.py", line 259, in call_macro
+    return macro(*args, **kwargs)
+  File "/Users/mversage003/opt/anaconda3/lib/python3.8/site-packages/jinja2/runtime.py", line 675, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/Users/mversage003/opt/anaconda3/lib/python3.8/site-packages/jinja2/runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 63, in macro
+  File "/Users/mversage003/opt/anaconda3/lib/python3.8/site-packages/jinja2/sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/Users/mversage003/opt/anaconda3/lib/python3.8/site-packages/jinja2/runtime.py", line 290, in call
+    return __obj(*args, **kwargs)
+  File "/Users/mversage003/opt/anaconda3/lib/python3.8/site-packages/dbt/clients/jinja.py", line 332, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/Users/mversage003/opt/anaconda3/lib/python3.8/site-packages/dbt/clients/jinja.py", line 259, in call_macro
+    return macro(*args, **kwargs)
+  File "/Users/mversage003/opt/anaconda3/lib/python3.8/site-packages/jinja2/runtime.py", line 675, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/Users/mversage003/opt/anaconda3/lib/python3.8/site-packages/jinja2/runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 41, in macro
+  File "/Users/mversage003/opt/anaconda3/lib/python3.8/site-packages/jinja2/sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/Users/mversage003/opt/anaconda3/lib/python3.8/site-packages/jinja2/runtime.py", line 290, in call
+    return __obj(*args, **kwargs)
+  File "/Users/mversage003/opt/anaconda3/lib/python3.8/site-packages/dbt/adapters/base/impl.py", line 227, in execute
+    return self.connections.execute(
+  File "/Users/mversage003/opt/anaconda3/lib/python3.8/site-packages/dbt/adapters/sql/connections.py", line 124, in execute
+    _, cursor = self.add_query(sql, auto_begin)
+  File "/Users/mversage003/opt/anaconda3/lib/python3.8/site-packages/dbt/adapters/sql/connections.py", line 87, in add_query
+    return connection, cursor
+  File "/Users/mversage003/opt/anaconda3/lib/python3.8/contextlib.py", line 131, in __exit__
+    self.gen.throw(type, value, traceback)
+  File "/Users/mversage003/opt/anaconda3/lib/python3.8/site-packages/dbt/adapters/postgres/connections.py", line 58, in exception_handler
+    raise dbt.exceptions.DatabaseException(str(e).strip()) from e
+dbt.exceptions.DatabaseException: Database Error in model rental_stats (models/rental_stats.sql)
+  relation "enriched_rental" does not exist
+  LINE 36:                 FROM enriched_rental er 
+                                ^
+  compiled SQL at target/run/pagila_pql/models/rental_stats.sql
+2021-07-06 22:14:58.409451 (Thread-1): 15:14:58 | 1 of 1 ERROR creating table model public.rental_stats........................................................ [ERROR in 0.05s]
+2021-07-06 22:14:58.409591 (Thread-1): Finished running node model.pagila_pql.rental_stats
+2021-07-06 22:14:58.411032 (MainThread): Acquiring new postgres connection "master".
+2021-07-06 22:14:58.411179 (MainThread): Using postgres connection "master".
+2021-07-06 22:14:58.411248 (MainThread): On master: BEGIN
+2021-07-06 22:14:58.411309 (MainThread): Opening a new connection, currently in state closed
+2021-07-06 22:14:58.418837 (MainThread): SQL status: BEGIN in 0.01 seconds
+2021-07-06 22:14:58.419026 (MainThread): On master: COMMIT
+2021-07-06 22:14:58.419101 (MainThread): Using postgres connection "master".
+2021-07-06 22:14:58.419161 (MainThread): On master: COMMIT
+2021-07-06 22:14:58.420019 (MainThread): SQL status: COMMIT in 0.00 seconds
+2021-07-06 22:14:58.420150 (MainThread): On master: Close
+2021-07-06 22:14:58.420421 (MainThread): 15:14:58 | 
+2021-07-06 22:14:58.420528 (MainThread): 15:14:58 | Finished running 1 table model in 0.17s.
+2021-07-06 22:14:58.420654 (MainThread): Connection 'master' was properly closed.
+2021-07-06 22:14:58.420774 (MainThread): Connection 'model.pagila_pql.rental_stats' was properly closed.
+2021-07-06 22:14:58.424279 (MainThread): 
+2021-07-06 22:14:58.424435 (MainThread): Completed with 1 error and 0 warnings:
+2021-07-06 22:14:58.424516 (MainThread): 
+2021-07-06 22:14:58.424588 (MainThread): Database Error in model rental_stats (models/rental_stats.sql)
+2021-07-06 22:14:58.424653 (MainThread):   relation "enriched_rental" does not exist
+2021-07-06 22:14:58.424714 (MainThread):   LINE 36:                 FROM enriched_rental er 
+2021-07-06 22:14:58.424772 (MainThread):                                 ^
+2021-07-06 22:14:58.424829 (MainThread):   compiled SQL at target/run/pagila_pql/models/rental_stats.sql
+2021-07-06 22:14:58.424897 (MainThread): 
+Done. PASS=0 WARN=0 ERROR=1 SKIP=0 TOTAL=1
+2021-07-06 22:14:58.425061 (MainThread): Flushing usage events
+2021-07-06 22:15:21.215716 (MainThread): Running with dbt=0.19.2
+2021-07-06 22:15:21.297978 (MainThread): running dbt with arguments Namespace(cls=<class 'dbt.task.run.RunTask'>, debug=False, defer=None, exclude=None, fail_fast=False, full_refresh=False, log_cache_events=False, log_format='default', models=None, partial_parse=None, profile=None, profiles_dir='/Users/mversage003/.dbt', project_dir=None, record_timing_info=None, rpc_method='run', selector_name=None, single_threaded=False, state=None, strict=False, target=None, test_new_parser=False, threads=None, use_cache=True, use_colors=None, vars='{}', version_check=True, warn_error=False, which='run', write_json=True)
+2021-07-06 22:15:21.300119 (MainThread): Tracking: do not track
+2021-07-06 22:15:21.356296 (MainThread): Got an acceptable cached parse result
+2021-07-06 22:15:21.503634 (MainThread): Acquiring new postgres connection "model.pagila_pql.rental_stats".
+2021-07-06 22:15:21.554942 (MainThread): [WARNING]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.pagila_dest_tranformation.example
+
+2021-07-06 22:15:21.559095 (MainThread): Found 1 model, 2 tests, 0 snapshots, 0 analyses, 138 macros, 0 operations, 0 seed files, 0 sources, 0 exposures
+2021-07-06 22:15:21.560156 (MainThread): 
+2021-07-06 22:15:21.560581 (MainThread): Acquiring new postgres connection "master".
+2021-07-06 22:15:21.561320 (ThreadPoolExecutor-0_0): Acquiring new postgres connection "list_source_analytics".
+2021-07-06 22:15:21.569149 (ThreadPoolExecutor-0_0): Using postgres connection "list_source_analytics".
+2021-07-06 22:15:21.569293 (ThreadPoolExecutor-0_0): On list_source_analytics: /* {"app": "dbt", "dbt_version": "0.19.2", "profile_name": "normalize", "target_name": "prod", "connection_name": "list_source_analytics"} */
+
+    select distinct nspname from pg_namespace
+  
+2021-07-06 22:15:21.569366 (ThreadPoolExecutor-0_0): Opening a new connection, currently in state init
+2021-07-06 22:15:21.605771 (ThreadPoolExecutor-0_0): SQL status: SELECT 4 in 0.04 seconds
+2021-07-06 22:15:21.609158 (ThreadPoolExecutor-0_0): On list_source_analytics: Close
+2021-07-06 22:15:21.610687 (ThreadPoolExecutor-1_0): Acquiring new postgres connection "list_source_analytics_public".
+2021-07-06 22:15:21.615989 (ThreadPoolExecutor-1_0): Using postgres connection "list_source_analytics_public".
+2021-07-06 22:15:21.616133 (ThreadPoolExecutor-1_0): On list_source_analytics_public: BEGIN
+2021-07-06 22:15:21.616212 (ThreadPoolExecutor-1_0): Opening a new connection, currently in state closed
+2021-07-06 22:15:21.626803 (ThreadPoolExecutor-1_0): SQL status: BEGIN in 0.01 seconds
+2021-07-06 22:15:21.627011 (ThreadPoolExecutor-1_0): Using postgres connection "list_source_analytics_public".
+2021-07-06 22:15:21.627113 (ThreadPoolExecutor-1_0): On list_source_analytics_public: /* {"app": "dbt", "dbt_version": "0.19.2", "profile_name": "normalize", "target_name": "prod", "connection_name": "list_source_analytics_public"} */
+select
+      'source_analytics' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public'
+    union all
+    select
+      'source_analytics' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public'
+  
+2021-07-06 22:15:21.630069 (ThreadPoolExecutor-1_0): SQL status: SELECT 3 in 0.00 seconds
+2021-07-06 22:15:21.630624 (ThreadPoolExecutor-1_0): On list_source_analytics_public: ROLLBACK
+2021-07-06 22:15:21.631783 (ThreadPoolExecutor-1_0): On list_source_analytics_public: Close
+2021-07-06 22:15:21.635354 (MainThread): Using postgres connection "master".
+2021-07-06 22:15:21.635499 (MainThread): On master: BEGIN
+2021-07-06 22:15:21.635568 (MainThread): Opening a new connection, currently in state init
+2021-07-06 22:15:21.643934 (MainThread): SQL status: BEGIN in 0.01 seconds
+2021-07-06 22:15:21.644107 (MainThread): Using postgres connection "master".
+2021-07-06 22:15:21.644185 (MainThread): On master: /* {"app": "dbt", "dbt_version": "0.19.2", "profile_name": "normalize", "target_name": "prod", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+2021-07-06 22:15:21.648527 (MainThread): SQL status: SELECT 0 in 0.00 seconds
+2021-07-06 22:15:21.648871 (MainThread): On master: ROLLBACK
+2021-07-06 22:15:21.650020 (MainThread): Using postgres connection "master".
+2021-07-06 22:15:21.650129 (MainThread): On master: BEGIN
+2021-07-06 22:15:21.652107 (MainThread): SQL status: BEGIN in 0.00 seconds
+2021-07-06 22:15:21.652226 (MainThread): On master: COMMIT
+2021-07-06 22:15:21.652293 (MainThread): Using postgres connection "master".
+2021-07-06 22:15:21.652349 (MainThread): On master: COMMIT
+2021-07-06 22:15:21.653232 (MainThread): SQL status: COMMIT in 0.00 seconds
+2021-07-06 22:15:21.653348 (MainThread): On master: Close
+2021-07-06 22:15:21.653612 (MainThread): 15:15:21 | Concurrency: 32 threads (target='prod')
+2021-07-06 22:15:21.653735 (MainThread): 15:15:21 | 
+2021-07-06 22:15:21.660395 (Thread-1): Began running node model.pagila_pql.rental_stats
+2021-07-06 22:15:21.660679 (Thread-1): 15:15:21 | 1 of 1 START table model public.rental_stats................................................................. [RUN]
+2021-07-06 22:15:21.660966 (Thread-1): Acquiring new postgres connection "model.pagila_pql.rental_stats".
+2021-07-06 22:15:21.661114 (Thread-1): Compiling model.pagila_pql.rental_stats
+2021-07-06 22:15:21.663096 (Thread-1): Writing injected SQL for node "model.pagila_pql.rental_stats"
+2021-07-06 22:15:21.664022 (Thread-1): finished collecting timing info
+2021-07-06 22:15:21.677979 (Thread-1): Using postgres connection "model.pagila_pql.rental_stats".
+2021-07-06 22:15:21.678128 (Thread-1): On model.pagila_pql.rental_stats: /* {"app": "dbt", "dbt_version": "0.19.2", "profile_name": "normalize", "target_name": "prod", "node_id": "model.pagila_pql.rental_stats"} */
+drop table if exists "source_analytics"."public"."rental_stats__dbt_tmp" cascade
+2021-07-06 22:15:21.678202 (Thread-1): Opening a new connection, currently in state closed
+2021-07-06 22:15:21.686418 (Thread-1): SQL status: DROP TABLE in 0.01 seconds
+2021-07-06 22:15:21.688387 (Thread-1): Using postgres connection "model.pagila_pql.rental_stats".
+2021-07-06 22:15:21.688530 (Thread-1): On model.pagila_pql.rental_stats: /* {"app": "dbt", "dbt_version": "0.19.2", "profile_name": "normalize", "target_name": "prod", "node_id": "model.pagila_pql.rental_stats"} */
+drop table if exists "source_analytics"."public"."rental_stats__dbt_backup" cascade
+2021-07-06 22:15:21.689975 (Thread-1): SQL status: DROP TABLE in 0.00 seconds
+2021-07-06 22:15:21.699418 (Thread-1): Writing runtime SQL for node "model.pagila_pql.rental_stats"
+2021-07-06 22:15:21.700268 (Thread-1): Using postgres connection "model.pagila_pql.rental_stats".
+2021-07-06 22:15:21.700380 (Thread-1): On model.pagila_pql.rental_stats: BEGIN
+2021-07-06 22:15:21.701813 (Thread-1): SQL status: BEGIN in 0.00 seconds
+2021-07-06 22:15:21.701941 (Thread-1): Using postgres connection "model.pagila_pql.rental_stats".
+2021-07-06 22:15:21.702005 (Thread-1): On model.pagila_pql.rental_stats: /* {"app": "dbt", "dbt_version": "0.19.2", "profile_name": "normalize", "target_name": "prod", "node_id": "model.pagila_pql.rental_stats"} */
+
+
+  create  table "source_analytics"."public"."rental_stats__dbt_tmp"
+  as (
+    /*
+    Welcome to your first dbt model!
+    Did you know that you can also configure models directly within SQL files?
+    This will override configurations stated in dbt_project.yml
+
+    Try changing "table" to "view" below
+*/
+
+
+
+WITH enriched_data as (
+    SELECT *,
+        date_part('week', to_date(r.rental_date, 'YYYY/MM/DD')) AS rental_week,
+        date_part('year', to_date(r.rental_date, 'YYYY/MM/DD'))  AS rental_year,
+        date_part('week', to_date(r.return_date, 'YYYY/MM/DD')) AS return_week,
+        date_part('year', to_date(r.return_date, 'YYYY/MM/DD')) AS return_year
+    FROM rental r 
+), rental_stats as (
+    SELECT 
+        CASE 
+            WHEN agg_returns.WeekBeginning ISNULL THEN open_rentals.WeekBeginning
+            ELSE agg_returns.WeekBeginning
+        END as WeekBeginning,
+        agg_returns.ReturnedRentals,
+        open_rentals.OutstandingRentals
+
+    FROM (
+        SELECT returned_info.WeekBeginning, SUM(returned_info.ReturnedRentals) AS ReturnedRentals
+        FROM(
+                SELECT date_trunc('week', return_date::timestamp)::date AS WeekBeginning, count(*) AS ReturnedRentals
+                FROM enriched_data er 
+                WHERE rental_week = return_week and rental_year = return_year 
+                GROUP BY date_trunc('week', return_date::timestamp)::date
+            UNION ALL
+                SELECT date_trunc('week', return_date::timestamp)::date AS WeekBeginning, count(*) AS ReturnedRentals
+                FROM enriched_data er 
+                WHERE rental_week != return_week
+                GROUP BY date_trunc('week', return_date::timestamp)::date
+                ) returned_info
+        GROUP BY returned_info.WeekBeginning ) AS agg_returns
+    FULL JOIN (
+        SELECT date_trunc('week', rental_date ::timestamp)::date AS WeekBeginning, count(*) AS OutstandingRentals
+        FROM enriched_data er 
+        WHERE rental_week != return_week or return_week ISNULL
+        GROUP BY date_trunc('week', rental_date ::timestamp)::date
+    ) AS open_rentals ON open_rentals.WeekBeginning = agg_returns.WeekBeginning
+    ORDER BY WeekBeginning
+)
+
+
+SELECT * 
+FROM rental_stats
+  );
+2021-07-06 22:15:21.774083 (Thread-1): SQL status: SELECT 16 in 0.07 seconds
+2021-07-06 22:15:21.779579 (Thread-1): Using postgres connection "model.pagila_pql.rental_stats".
+2021-07-06 22:15:21.779726 (Thread-1): On model.pagila_pql.rental_stats: /* {"app": "dbt", "dbt_version": "0.19.2", "profile_name": "normalize", "target_name": "prod", "node_id": "model.pagila_pql.rental_stats"} */
+alter table "source_analytics"."public"."rental_stats__dbt_tmp" rename to "rental_stats"
+2021-07-06 22:15:21.781888 (Thread-1): SQL status: ALTER TABLE in 0.00 seconds
+2021-07-06 22:15:21.787112 (Thread-1): On model.pagila_pql.rental_stats: COMMIT
+2021-07-06 22:15:21.787261 (Thread-1): Using postgres connection "model.pagila_pql.rental_stats".
+2021-07-06 22:15:21.787328 (Thread-1): On model.pagila_pql.rental_stats: COMMIT
+2021-07-06 22:15:21.789952 (Thread-1): SQL status: COMMIT in 0.00 seconds
+2021-07-06 22:15:21.793039 (Thread-1): Using postgres connection "model.pagila_pql.rental_stats".
+2021-07-06 22:15:21.793193 (Thread-1): On model.pagila_pql.rental_stats: /* {"app": "dbt", "dbt_version": "0.19.2", "profile_name": "normalize", "target_name": "prod", "node_id": "model.pagila_pql.rental_stats"} */
+drop table if exists "source_analytics"."public"."rental_stats__dbt_backup" cascade
+2021-07-06 22:15:21.794924 (Thread-1): SQL status: DROP TABLE in 0.00 seconds
+2021-07-06 22:15:21.795927 (Thread-1): finished collecting timing info
+2021-07-06 22:15:21.796060 (Thread-1): On model.pagila_pql.rental_stats: Close
+2021-07-06 22:15:21.796452 (Thread-1): 15:15:21 | 1 of 1 OK created table model public.rental_stats............................................................ [SELECT 16 in 0.14s]
+2021-07-06 22:15:21.796571 (Thread-1): Finished running node model.pagila_pql.rental_stats
+2021-07-06 22:15:21.798303 (MainThread): Acquiring new postgres connection "master".
+2021-07-06 22:15:21.798470 (MainThread): Using postgres connection "master".
+2021-07-06 22:15:21.798537 (MainThread): On master: BEGIN
+2021-07-06 22:15:21.798598 (MainThread): Opening a new connection, currently in state closed
+2021-07-06 22:15:21.806519 (MainThread): SQL status: BEGIN in 0.01 seconds
+2021-07-06 22:15:21.806701 (MainThread): On master: COMMIT
+2021-07-06 22:15:21.806772 (MainThread): Using postgres connection "master".
+2021-07-06 22:15:21.806831 (MainThread): On master: COMMIT
+2021-07-06 22:15:21.807757 (MainThread): SQL status: COMMIT in 0.00 seconds
+2021-07-06 22:15:21.807889 (MainThread): On master: Close
+2021-07-06 22:15:21.808168 (MainThread): 15:15:21 | 
+2021-07-06 22:15:21.808275 (MainThread): 15:15:21 | Finished running 1 table model in 0.25s.
+2021-07-06 22:15:21.808386 (MainThread): Connection 'master' was properly closed.
+2021-07-06 22:15:21.808473 (MainThread): Connection 'model.pagila_pql.rental_stats' was properly closed.
+2021-07-06 22:15:21.811827 (MainThread): 
+2021-07-06 22:15:21.811985 (MainThread): Completed successfully
+2021-07-06 22:15:21.812078 (MainThread): 
+Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+2021-07-06 22:15:21.812208 (MainThread): Flushing usage events
+2021-07-06 22:18:59.363117 (MainThread): Running with dbt=0.19.2
+2021-07-06 22:18:59.447475 (MainThread): running dbt with arguments Namespace(cls=<class 'dbt.task.run.RunTask'>, debug=False, defer=None, exclude=None, fail_fast=False, full_refresh=False, log_cache_events=False, log_format='default', models=None, partial_parse=None, profile=None, profiles_dir='/Users/mversage003/.dbt', project_dir=None, record_timing_info=None, rpc_method='run', selector_name=None, single_threaded=False, state=None, strict=False, target=None, test_new_parser=False, threads=None, use_cache=True, use_colors=None, vars='{}', version_check=True, warn_error=False, which='run', write_json=True)
+2021-07-06 22:18:59.449322 (MainThread): Tracking: do not track
+2021-07-06 22:18:59.507543 (MainThread): Got an acceptable cached parse result
+2021-07-06 22:18:59.645466 (MainThread): Acquiring new postgres connection "model.pagila_pql.rental_stats".
+2021-07-06 22:18:59.712367 (MainThread): [WARNING]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.pagila_dest_tranformation.example
+
+2021-07-06 22:18:59.717455 (MainThread): Found 1 model, 2 tests, 0 snapshots, 0 analyses, 138 macros, 0 operations, 0 seed files, 0 sources, 0 exposures
+2021-07-06 22:18:59.718287 (MainThread): 
+2021-07-06 22:18:59.718624 (MainThread): Acquiring new postgres connection "master".
+2021-07-06 22:18:59.719714 (ThreadPoolExecutor-0_0): Acquiring new postgres connection "list_source_analytics".
+2021-07-06 22:18:59.727598 (ThreadPoolExecutor-0_0): Using postgres connection "list_source_analytics".
+2021-07-06 22:18:59.727719 (ThreadPoolExecutor-0_0): On list_source_analytics: /* {"app": "dbt", "dbt_version": "0.19.2", "profile_name": "normalize", "target_name": "prod", "connection_name": "list_source_analytics"} */
+
+    select distinct nspname from pg_namespace
+  
+2021-07-06 22:18:59.727792 (ThreadPoolExecutor-0_0): Opening a new connection, currently in state init
+2021-07-06 22:18:59.762973 (ThreadPoolExecutor-0_0): SQL status: SELECT 4 in 0.04 seconds
+2021-07-06 22:18:59.766238 (ThreadPoolExecutor-0_0): On list_source_analytics: Close
+2021-07-06 22:18:59.767340 (ThreadPoolExecutor-1_0): Acquiring new postgres connection "list_source_analytics_public".
+2021-07-06 22:18:59.772876 (ThreadPoolExecutor-1_0): Using postgres connection "list_source_analytics_public".
+2021-07-06 22:18:59.773031 (ThreadPoolExecutor-1_0): On list_source_analytics_public: BEGIN
+2021-07-06 22:18:59.773109 (ThreadPoolExecutor-1_0): Opening a new connection, currently in state closed
+2021-07-06 22:18:59.782246 (ThreadPoolExecutor-1_0): SQL status: BEGIN in 0.01 seconds
+2021-07-06 22:18:59.782435 (ThreadPoolExecutor-1_0): Using postgres connection "list_source_analytics_public".
+2021-07-06 22:18:59.782511 (ThreadPoolExecutor-1_0): On list_source_analytics_public: /* {"app": "dbt", "dbt_version": "0.19.2", "profile_name": "normalize", "target_name": "prod", "connection_name": "list_source_analytics_public"} */
+select
+      'source_analytics' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public'
+    union all
+    select
+      'source_analytics' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public'
+  
+2021-07-06 22:18:59.785418 (ThreadPoolExecutor-1_0): SQL status: SELECT 4 in 0.00 seconds
+2021-07-06 22:18:59.786011 (ThreadPoolExecutor-1_0): On list_source_analytics_public: ROLLBACK
+2021-07-06 22:18:59.786986 (ThreadPoolExecutor-1_0): On list_source_analytics_public: Close
+2021-07-06 22:18:59.791398 (MainThread): Using postgres connection "master".
+2021-07-06 22:18:59.791546 (MainThread): On master: BEGIN
+2021-07-06 22:18:59.791620 (MainThread): Opening a new connection, currently in state init
+2021-07-06 22:18:59.799614 (MainThread): SQL status: BEGIN in 0.01 seconds
+2021-07-06 22:18:59.799788 (MainThread): Using postgres connection "master".
+2021-07-06 22:18:59.799863 (MainThread): On master: /* {"app": "dbt", "dbt_version": "0.19.2", "profile_name": "normalize", "target_name": "prod", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+2021-07-06 22:18:59.805428 (MainThread): SQL status: SELECT 0 in 0.01 seconds
+2021-07-06 22:18:59.805769 (MainThread): On master: ROLLBACK
+2021-07-06 22:18:59.806806 (MainThread): Using postgres connection "master".
+2021-07-06 22:18:59.806907 (MainThread): On master: BEGIN
+2021-07-06 22:18:59.809409 (MainThread): SQL status: BEGIN in 0.00 seconds
+2021-07-06 22:18:59.809610 (MainThread): On master: COMMIT
+2021-07-06 22:18:59.809690 (MainThread): Using postgres connection "master".
+2021-07-06 22:18:59.809752 (MainThread): On master: COMMIT
+2021-07-06 22:18:59.810670 (MainThread): SQL status: COMMIT in 0.00 seconds
+2021-07-06 22:18:59.810794 (MainThread): On master: Close
+2021-07-06 22:18:59.811070 (MainThread): 15:18:59 | Concurrency: 32 threads (target='prod')
+2021-07-06 22:18:59.811183 (MainThread): 15:18:59 | 
+2021-07-06 22:18:59.815912 (Thread-1): Began running node model.pagila_pql.rental_stats
+2021-07-06 22:18:59.816182 (Thread-1): 15:18:59 | 1 of 1 START table model public.rental_stats................................................................. [RUN]
+2021-07-06 22:18:59.816563 (Thread-1): Acquiring new postgres connection "model.pagila_pql.rental_stats".
+2021-07-06 22:18:59.816693 (Thread-1): Compiling model.pagila_pql.rental_stats
+2021-07-06 22:18:59.818783 (Thread-1): Writing injected SQL for node "model.pagila_pql.rental_stats"
+2021-07-06 22:18:59.819971 (Thread-1): finished collecting timing info
+2021-07-06 22:18:59.833729 (Thread-1): Using postgres connection "model.pagila_pql.rental_stats".
+2021-07-06 22:18:59.833921 (Thread-1): On model.pagila_pql.rental_stats: /* {"app": "dbt", "dbt_version": "0.19.2", "profile_name": "normalize", "target_name": "prod", "node_id": "model.pagila_pql.rental_stats"} */
+drop table if exists "source_analytics"."public"."rental_stats__dbt_tmp" cascade
+2021-07-06 22:18:59.834027 (Thread-1): Opening a new connection, currently in state closed
+2021-07-06 22:18:59.842909 (Thread-1): SQL status: DROP TABLE in 0.01 seconds
+2021-07-06 22:18:59.844823 (Thread-1): Using postgres connection "model.pagila_pql.rental_stats".
+2021-07-06 22:18:59.844945 (Thread-1): On model.pagila_pql.rental_stats: /* {"app": "dbt", "dbt_version": "0.19.2", "profile_name": "normalize", "target_name": "prod", "node_id": "model.pagila_pql.rental_stats"} */
+drop table if exists "source_analytics"."public"."rental_stats__dbt_backup" cascade
+2021-07-06 22:18:59.846284 (Thread-1): SQL status: DROP TABLE in 0.00 seconds
+2021-07-06 22:18:59.855540 (Thread-1): Writing runtime SQL for node "model.pagila_pql.rental_stats"
+2021-07-06 22:18:59.856702 (Thread-1): Using postgres connection "model.pagila_pql.rental_stats".
+2021-07-06 22:18:59.856806 (Thread-1): On model.pagila_pql.rental_stats: BEGIN
+2021-07-06 22:18:59.858427 (Thread-1): SQL status: BEGIN in 0.00 seconds
+2021-07-06 22:18:59.858552 (Thread-1): Using postgres connection "model.pagila_pql.rental_stats".
+2021-07-06 22:18:59.858621 (Thread-1): On model.pagila_pql.rental_stats: /* {"app": "dbt", "dbt_version": "0.19.2", "profile_name": "normalize", "target_name": "prod", "node_id": "model.pagila_pql.rental_stats"} */
+
+
+  create  table "source_analytics"."public"."rental_stats__dbt_tmp"
+  as (
+    /*
+    Welcome to your first dbt model!
+    Did you know that you can also configure models directly within SQL files?
+    This will override configurations stated in dbt_project.yml
+
+    Try changing "table" to "view" below
+*/
+
+
+
+WITH enriched_data as (
+    SELECT *,
+        date_part('week', to_date(r.rental_date, 'YYYY/MM/DD')) AS rental_week,
+        date_part('year', to_date(r.rental_date, 'YYYY/MM/DD'))  AS rental_year,
+        date_part('week', to_date(r.return_date, 'YYYY/MM/DD')) AS return_week,
+        date_part('year', to_date(r.return_date, 'YYYY/MM/DD')) AS return_year
+    FROM rental r 
+), rental_stats as (
+    SELECT 
+        CASE 
+            WHEN agg_returns.WeekBeginning ISNULL THEN open_rentals.WeekBeginning
+            ELSE agg_returns.WeekBeginning
+        END as WeekBeginning,
+        agg_returns.ReturnedRentals,
+        open_rentals.OutstandingRentals
+
+    FROM (
+        SELECT returned_info.WeekBeginning, SUM(returned_info.ReturnedRentals) AS ReturnedRentals
+        FROM(
+                SELECT date_trunc('week', return_date::timestamp)::date AS WeekBeginning, count(*) AS ReturnedRentals
+                FROM enriched_data er 
+                WHERE rental_week = return_week and rental_year = return_year 
+                GROUP BY date_trunc('week', return_date::timestamp)::date
+            UNION ALL
+                SELECT date_trunc('week', return_date::timestamp)::date AS WeekBeginning, count(*) AS ReturnedRentals
+                FROM enriched_data er 
+                WHERE rental_week != return_week
+                GROUP BY date_trunc('week', return_date::timestamp)::date
+                ) returned_info
+        GROUP BY returned_info.WeekBeginning ) AS agg_returns
+    FULL JOIN (
+        SELECT date_trunc('week', rental_date ::timestamp)::date AS WeekBeginning, count(*) AS OutstandingRentals
+        FROM enriched_data er 
+        WHERE rental_week != return_week or return_week ISNULL
+        GROUP BY date_trunc('week', rental_date ::timestamp)::date
+    ) AS open_rentals ON open_rentals.WeekBeginning = agg_returns.WeekBeginning
+    ORDER BY WeekBeginning
+)
+
+
+SELECT * 
+FROM rental_stats
+  );
+2021-07-06 22:18:59.917603 (Thread-1): SQL status: SELECT 16 in 0.06 seconds
+2021-07-06 22:18:59.923295 (Thread-1): Using postgres connection "model.pagila_pql.rental_stats".
+2021-07-06 22:18:59.923441 (Thread-1): On model.pagila_pql.rental_stats: /* {"app": "dbt", "dbt_version": "0.19.2", "profile_name": "normalize", "target_name": "prod", "node_id": "model.pagila_pql.rental_stats"} */
+alter table "source_analytics"."public"."rental_stats" rename to "rental_stats__dbt_backup"
+2021-07-06 22:18:59.925765 (Thread-1): SQL status: ALTER TABLE in 0.00 seconds
+2021-07-06 22:18:59.927801 (Thread-1): Using postgres connection "model.pagila_pql.rental_stats".
+2021-07-06 22:18:59.927907 (Thread-1): On model.pagila_pql.rental_stats: /* {"app": "dbt", "dbt_version": "0.19.2", "profile_name": "normalize", "target_name": "prod", "node_id": "model.pagila_pql.rental_stats"} */
+alter table "source_analytics"."public"."rental_stats__dbt_tmp" rename to "rental_stats"
+2021-07-06 22:18:59.929365 (Thread-1): SQL status: ALTER TABLE in 0.00 seconds
+2021-07-06 22:18:59.934427 (Thread-1): On model.pagila_pql.rental_stats: COMMIT
+2021-07-06 22:18:59.934571 (Thread-1): Using postgres connection "model.pagila_pql.rental_stats".
+2021-07-06 22:18:59.934641 (Thread-1): On model.pagila_pql.rental_stats: COMMIT
+2021-07-06 22:18:59.937003 (Thread-1): SQL status: COMMIT in 0.00 seconds
+2021-07-06 22:18:59.939602 (Thread-1): Using postgres connection "model.pagila_pql.rental_stats".
+2021-07-06 22:18:59.939714 (Thread-1): On model.pagila_pql.rental_stats: /* {"app": "dbt", "dbt_version": "0.19.2", "profile_name": "normalize", "target_name": "prod", "node_id": "model.pagila_pql.rental_stats"} */
+drop table if exists "source_analytics"."public"."rental_stats__dbt_backup" cascade
+2021-07-06 22:18:59.942334 (Thread-1): SQL status: DROP TABLE in 0.00 seconds
+2021-07-06 22:18:59.943347 (Thread-1): finished collecting timing info
+2021-07-06 22:18:59.943480 (Thread-1): On model.pagila_pql.rental_stats: Close
+2021-07-06 22:18:59.943901 (Thread-1): 15:18:59 | 1 of 1 OK created table model public.rental_stats............................................................ [SELECT 16 in 0.13s]
+2021-07-06 22:18:59.944054 (Thread-1): Finished running node model.pagila_pql.rental_stats
+2021-07-06 22:18:59.945512 (MainThread): Acquiring new postgres connection "master".
+2021-07-06 22:18:59.945683 (MainThread): Using postgres connection "master".
+2021-07-06 22:18:59.945756 (MainThread): On master: BEGIN
+2021-07-06 22:18:59.945826 (MainThread): Opening a new connection, currently in state closed
+2021-07-06 22:18:59.953903 (MainThread): SQL status: BEGIN in 0.01 seconds
+2021-07-06 22:18:59.954088 (MainThread): On master: COMMIT
+2021-07-06 22:18:59.954165 (MainThread): Using postgres connection "master".
+2021-07-06 22:18:59.954223 (MainThread): On master: COMMIT
+2021-07-06 22:18:59.955135 (MainThread): SQL status: COMMIT in 0.00 seconds
+2021-07-06 22:18:59.955258 (MainThread): On master: Close
+2021-07-06 22:18:59.955547 (MainThread): 15:18:59 | 
+2021-07-06 22:18:59.955683 (MainThread): 15:18:59 | Finished running 1 table model in 0.24s.
+2021-07-06 22:18:59.955805 (MainThread): Connection 'master' was properly closed.
+2021-07-06 22:18:59.955893 (MainThread): Connection 'model.pagila_pql.rental_stats' was properly closed.
+2021-07-06 22:18:59.959451 (MainThread): 
+2021-07-06 22:18:59.959627 (MainThread): Completed successfully
+2021-07-06 22:18:59.959721 (MainThread): 
+Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+2021-07-06 22:18:59.959853 (MainThread): Flushing usage events
+2021-07-07 02:11:34.793431 (MainThread): Running with dbt=0.19.2
+2021-07-07 02:11:34.899881 (MainThread): running dbt with arguments Namespace(cls=<class 'dbt.task.run.RunTask'>, debug=False, defer=None, exclude=None, fail_fast=False, full_refresh=False, log_cache_events=False, log_format='default', models=None, partial_parse=None, profile=None, profiles_dir='/Users/mversage003/.dbt', project_dir=None, record_timing_info=None, rpc_method='run', selector_name=None, single_threaded=False, state=None, strict=False, target=None, test_new_parser=False, threads=None, use_cache=True, use_colors=None, vars='{}', version_check=True, warn_error=False, which='run', write_json=True)
+2021-07-07 02:11:34.902598 (MainThread): Tracking: do not track
+2021-07-07 02:11:34.985172 (MainThread): Got an acceptable cached parse result
+2021-07-07 02:11:35.133317 (MainThread): Acquiring new postgres connection "model.pagila_pql.rental_stats".
+2021-07-07 02:11:35.205453 (MainThread): [WARNING]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.pagila_dest_tranformation.example
+
+2021-07-07 02:11:35.212045 (MainThread): Found 1 model, 2 tests, 0 snapshots, 0 analyses, 138 macros, 0 operations, 0 seed files, 0 sources, 0 exposures
+2021-07-07 02:11:35.212975 (MainThread): 
+2021-07-07 02:11:35.213474 (MainThread): Acquiring new postgres connection "master".
+2021-07-07 02:11:35.214355 (ThreadPoolExecutor-0_0): Acquiring new postgres connection "list_source_analytics".
+2021-07-07 02:11:35.223769 (ThreadPoolExecutor-0_0): Using postgres connection "list_source_analytics".
+2021-07-07 02:11:35.223931 (ThreadPoolExecutor-0_0): On list_source_analytics: /* {"app": "dbt", "dbt_version": "0.19.2", "profile_name": "normalize", "target_name": "prod", "connection_name": "list_source_analytics"} */
+
+    select distinct nspname from pg_namespace
+  
+2021-07-07 02:11:35.224012 (ThreadPoolExecutor-0_0): Opening a new connection, currently in state init
+2021-07-07 02:11:35.258495 (ThreadPoolExecutor-0_0): SQL status: SELECT 4 in 0.03 seconds
+2021-07-07 02:11:35.262656 (ThreadPoolExecutor-0_0): On list_source_analytics: Close
+2021-07-07 02:11:35.263844 (ThreadPoolExecutor-1_0): Acquiring new postgres connection "list_source_analytics_public".
+2021-07-07 02:11:35.269201 (ThreadPoolExecutor-1_0): Using postgres connection "list_source_analytics_public".
+2021-07-07 02:11:35.269352 (ThreadPoolExecutor-1_0): On list_source_analytics_public: BEGIN
+2021-07-07 02:11:35.269423 (ThreadPoolExecutor-1_0): Opening a new connection, currently in state closed
+2021-07-07 02:11:35.278563 (ThreadPoolExecutor-1_0): SQL status: BEGIN in 0.01 seconds
+2021-07-07 02:11:35.278755 (ThreadPoolExecutor-1_0): Using postgres connection "list_source_analytics_public".
+2021-07-07 02:11:35.278832 (ThreadPoolExecutor-1_0): On list_source_analytics_public: /* {"app": "dbt", "dbt_version": "0.19.2", "profile_name": "normalize", "target_name": "prod", "connection_name": "list_source_analytics_public"} */
+select
+      'source_analytics' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public'
+    union all
+    select
+      'source_analytics' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public'
+  
+2021-07-07 02:11:35.281767 (ThreadPoolExecutor-1_0): SQL status: SELECT 4 in 0.00 seconds
+2021-07-07 02:11:35.282369 (ThreadPoolExecutor-1_0): On list_source_analytics_public: ROLLBACK
+2021-07-07 02:11:35.283246 (ThreadPoolExecutor-1_0): On list_source_analytics_public: Close
+2021-07-07 02:11:35.288180 (MainThread): Using postgres connection "master".
+2021-07-07 02:11:35.288368 (MainThread): On master: BEGIN
+2021-07-07 02:11:35.288438 (MainThread): Opening a new connection, currently in state init
+2021-07-07 02:11:35.296312 (MainThread): SQL status: BEGIN in 0.01 seconds
+2021-07-07 02:11:35.296508 (MainThread): Using postgres connection "master".
+2021-07-07 02:11:35.296595 (MainThread): On master: /* {"app": "dbt", "dbt_version": "0.19.2", "profile_name": "normalize", "target_name": "prod", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+2021-07-07 02:11:35.301791 (MainThread): SQL status: SELECT 0 in 0.01 seconds
+2021-07-07 02:11:35.302137 (MainThread): On master: ROLLBACK
+2021-07-07 02:11:35.303199 (MainThread): Using postgres connection "master".
+2021-07-07 02:11:35.303284 (MainThread): On master: BEGIN
+2021-07-07 02:11:35.305894 (MainThread): SQL status: BEGIN in 0.00 seconds
+2021-07-07 02:11:35.306093 (MainThread): On master: COMMIT
+2021-07-07 02:11:35.306172 (MainThread): Using postgres connection "master".
+2021-07-07 02:11:35.306232 (MainThread): On master: COMMIT
+2021-07-07 02:11:35.307210 (MainThread): SQL status: COMMIT in 0.00 seconds
+2021-07-07 02:11:35.307329 (MainThread): On master: Close
+2021-07-07 02:11:35.307601 (MainThread): 19:11:35 | Concurrency: 32 threads (target='prod')
+2021-07-07 02:11:35.307709 (MainThread): 19:11:35 | 
+2021-07-07 02:11:35.313026 (Thread-1): Began running node model.pagila_pql.rental_stats
+2021-07-07 02:11:35.313337 (Thread-1): 19:11:35 | 1 of 1 START table model public.rental_stats................................................................. [RUN]
+2021-07-07 02:11:35.313612 (Thread-1): Acquiring new postgres connection "model.pagila_pql.rental_stats".
+2021-07-07 02:11:35.313711 (Thread-1): Compiling model.pagila_pql.rental_stats
+2021-07-07 02:11:35.315604 (Thread-1): Writing injected SQL for node "model.pagila_pql.rental_stats"
+2021-07-07 02:11:35.317357 (Thread-1): finished collecting timing info
+2021-07-07 02:11:35.332139 (Thread-1): Using postgres connection "model.pagila_pql.rental_stats".
+2021-07-07 02:11:35.332277 (Thread-1): On model.pagila_pql.rental_stats: /* {"app": "dbt", "dbt_version": "0.19.2", "profile_name": "normalize", "target_name": "prod", "node_id": "model.pagila_pql.rental_stats"} */
+drop table if exists "source_analytics"."public"."rental_stats__dbt_tmp" cascade
+2021-07-07 02:11:35.332352 (Thread-1): Opening a new connection, currently in state closed
+2021-07-07 02:11:35.341872 (Thread-1): SQL status: DROP TABLE in 0.01 seconds
+2021-07-07 02:11:35.343993 (Thread-1): Using postgres connection "model.pagila_pql.rental_stats".
+2021-07-07 02:11:35.344122 (Thread-1): On model.pagila_pql.rental_stats: /* {"app": "dbt", "dbt_version": "0.19.2", "profile_name": "normalize", "target_name": "prod", "node_id": "model.pagila_pql.rental_stats"} */
+drop table if exists "source_analytics"."public"."rental_stats__dbt_backup" cascade
+2021-07-07 02:11:35.345484 (Thread-1): SQL status: DROP TABLE in 0.00 seconds
+2021-07-07 02:11:35.355503 (Thread-1): Writing runtime SQL for node "model.pagila_pql.rental_stats"
+2021-07-07 02:11:35.357064 (Thread-1): Using postgres connection "model.pagila_pql.rental_stats".
+2021-07-07 02:11:35.357228 (Thread-1): On model.pagila_pql.rental_stats: BEGIN
+2021-07-07 02:11:35.358844 (Thread-1): SQL status: BEGIN in 0.00 seconds
+2021-07-07 02:11:35.358968 (Thread-1): Using postgres connection "model.pagila_pql.rental_stats".
+2021-07-07 02:11:35.359030 (Thread-1): On model.pagila_pql.rental_stats: /* {"app": "dbt", "dbt_version": "0.19.2", "profile_name": "normalize", "target_name": "prod", "node_id": "model.pagila_pql.rental_stats"} */
+
+
+  create  table "source_analytics"."public"."rental_stats__dbt_tmp"
+  as (
+    /*
+    Welcome to your first dbt model!
+    Did you know that you can also configure models directly within SQL files?
+    This will override configurations stated in dbt_project.yml
+
+    Try changing "table" to "view" below
+*/
+
+
+
+WITH enriched_data as (
+    SELECT *,
+        date_part('week', to_date(r.rental_date, 'YYYY/MM/DD')) AS rental_week,
+        date_part('year', to_date(r.rental_date, 'YYYY/MM/DD'))  AS rental_year,
+        date_part('week', to_date(r.return_date, 'YYYY/MM/DD')) AS return_week,
+        date_part('year', to_date(r.return_date, 'YYYY/MM/DD')) AS return_year
+    FROM rental r 
+), rental_stats as (
+    SELECT 
+        CASE 
+            WHEN agg_returns.WeekBeginning ISNULL THEN open_rentals.WeekBeginning
+            ELSE agg_returns.WeekBeginning
+        END as WeekBeginning,
+        agg_returns.ReturnedRentals,
+        open_rentals.OutstandingRentals
+
+    FROM (
+        SELECT returned_info.WeekBeginning, SUM(returned_info.ReturnedRentals) AS ReturnedRentals
+        FROM(
+                SELECT date_trunc('week', return_date::timestamp)::date AS WeekBeginning, count(*) AS ReturnedRentals
+                FROM enriched_data er 
+                WHERE rental_week = return_week and rental_year = return_year 
+                GROUP BY date_trunc('week', return_date::timestamp)::date
+            UNION ALL
+                SELECT date_trunc('week', return_date::timestamp)::date AS WeekBeginning, count(*) AS ReturnedRentals
+                FROM enriched_data er 
+                WHERE rental_week != return_week
+                GROUP BY date_trunc('week', return_date::timestamp)::date
+                ) returned_info
+        GROUP BY returned_info.WeekBeginning ) AS agg_returns
+    FULL JOIN (
+        SELECT date_trunc('week', rental_date ::timestamp)::date AS WeekBeginning, count(*) AS OutstandingRentals
+        FROM enriched_data er 
+        WHERE rental_week != return_week or return_week ISNULL
+        GROUP BY date_trunc('week', rental_date ::timestamp)::date
+    ) AS open_rentals ON open_rentals.WeekBeginning = agg_returns.WeekBeginning
+    ORDER BY WeekBeginning
+)
+
+
+SELECT * 
+FROM rental_stats
+  );
+2021-07-07 02:11:35.421859 (Thread-1): SQL status: SELECT 16 in 0.06 seconds
+2021-07-07 02:11:35.427500 (Thread-1): Using postgres connection "model.pagila_pql.rental_stats".
+2021-07-07 02:11:35.427630 (Thread-1): On model.pagila_pql.rental_stats: /* {"app": "dbt", "dbt_version": "0.19.2", "profile_name": "normalize", "target_name": "prod", "node_id": "model.pagila_pql.rental_stats"} */
+alter table "source_analytics"."public"."rental_stats" rename to "rental_stats__dbt_backup"
+2021-07-07 02:11:35.429696 (Thread-1): SQL status: ALTER TABLE in 0.00 seconds
+2021-07-07 02:11:35.431323 (Thread-1): Using postgres connection "model.pagila_pql.rental_stats".
+2021-07-07 02:11:35.431417 (Thread-1): On model.pagila_pql.rental_stats: /* {"app": "dbt", "dbt_version": "0.19.2", "profile_name": "normalize", "target_name": "prod", "node_id": "model.pagila_pql.rental_stats"} */
+alter table "source_analytics"."public"."rental_stats__dbt_tmp" rename to "rental_stats"
+2021-07-07 02:11:35.432561 (Thread-1): SQL status: ALTER TABLE in 0.00 seconds
+2021-07-07 02:11:35.438173 (Thread-1): On model.pagila_pql.rental_stats: COMMIT
+2021-07-07 02:11:35.438355 (Thread-1): Using postgres connection "model.pagila_pql.rental_stats".
+2021-07-07 02:11:35.438432 (Thread-1): On model.pagila_pql.rental_stats: COMMIT
+2021-07-07 02:11:35.440535 (Thread-1): SQL status: COMMIT in 0.00 seconds
+2021-07-07 02:11:35.443053 (Thread-1): Using postgres connection "model.pagila_pql.rental_stats".
+2021-07-07 02:11:35.443150 (Thread-1): On model.pagila_pql.rental_stats: /* {"app": "dbt", "dbt_version": "0.19.2", "profile_name": "normalize", "target_name": "prod", "node_id": "model.pagila_pql.rental_stats"} */
+drop table if exists "source_analytics"."public"."rental_stats__dbt_backup" cascade
+2021-07-07 02:11:35.445662 (Thread-1): SQL status: DROP TABLE in 0.00 seconds
+2021-07-07 02:11:35.446687 (Thread-1): finished collecting timing info
+2021-07-07 02:11:35.446820 (Thread-1): On model.pagila_pql.rental_stats: Close
+2021-07-07 02:11:35.447221 (Thread-1): 19:11:35 | 1 of 1 OK created table model public.rental_stats............................................................ [SELECT 16 in 0.13s]
+2021-07-07 02:11:35.447340 (Thread-1): Finished running node model.pagila_pql.rental_stats
+2021-07-07 02:11:35.448955 (MainThread): Acquiring new postgres connection "master".
+2021-07-07 02:11:35.449121 (MainThread): Using postgres connection "master".
+2021-07-07 02:11:35.449190 (MainThread): On master: BEGIN
+2021-07-07 02:11:35.449249 (MainThread): Opening a new connection, currently in state closed
+2021-07-07 02:11:35.457498 (MainThread): SQL status: BEGIN in 0.01 seconds
+2021-07-07 02:11:35.457681 (MainThread): On master: COMMIT
+2021-07-07 02:11:35.457758 (MainThread): Using postgres connection "master".
+2021-07-07 02:11:35.457817 (MainThread): On master: COMMIT
+2021-07-07 02:11:35.458646 (MainThread): SQL status: COMMIT in 0.00 seconds
+2021-07-07 02:11:35.458770 (MainThread): On master: Close
+2021-07-07 02:11:35.459040 (MainThread): 19:11:35 | 
+2021-07-07 02:11:35.459149 (MainThread): 19:11:35 | Finished running 1 table model in 0.25s.
+2021-07-07 02:11:35.459226 (MainThread): Connection 'master' was properly closed.
+2021-07-07 02:11:35.459281 (MainThread): Connection 'model.pagila_pql.rental_stats' was properly closed.
+2021-07-07 02:11:35.463285 (MainThread): 
+2021-07-07 02:11:35.463438 (MainThread): Completed successfully
+2021-07-07 02:11:35.463529 (MainThread): 
+Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+2021-07-07 02:11:35.463660 (MainThread): Flushing usage events
